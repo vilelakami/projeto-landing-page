@@ -4,14 +4,23 @@ header{
     border: 1px solid;
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 .titulo-principal{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row: 1;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     border: 1px solid;
+}
+.nav-bar{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row: 2;
 }
 .titulo-principal h1{
     text-align: center;
@@ -23,4 +32,11 @@ header{
 .titulo-principal img{
     grid-column-start: 2;
     grid-column-end: 3;
+    padding-block: 10px;
+}
+.nav-bar nav ul{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding-block: 10px;
 }
