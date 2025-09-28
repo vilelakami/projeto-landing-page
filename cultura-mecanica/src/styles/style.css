@@ -5,6 +5,7 @@ header{
     border: 1px solid;
     width: 100%;
     height: auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 0fr);
@@ -48,6 +49,9 @@ header{
     padding-block: 10px;
 }
 
+main{
+    margin: auto;
+}
 #foto-principal img{
     margin-top: 20px;
     border: 1px solid;
@@ -55,19 +59,20 @@ header{
     height: 400px;
     overflow: hidden;
 }
+/* position absolute para deixar o titulo e o paragrafo dentro da imagem */
 #foto-principal h1{
     position: absolute;
     z-index: 1;
-    bottom: 220px;
+    bottom: 150px;
     left: 50px;
 }
 #foto-principal p{
     position: absolute;
     z-index: 1;
-    bottom: 200px;
+    bottom: 120px;
     left: 50px;
 }
-
+/* usando flex e felx direction para alinhar a div e os articles */
 #destaques{
     border: 1px solid;
     margin-top: 20px;
@@ -76,14 +81,12 @@ header{
     justify-content: center;
     align-items: center;
 }
-
 .info{
     border: 1px solid;
     width: 75%; 
     height: 150px;  
     text-align: center;
 }
-
 .articles{
     border: 1px solid;
     display: flex;
@@ -92,12 +95,21 @@ header{
     margin-top: 20px;
     width: 100%;
 }
+/* ajustando as imagens para não passarem da area */
 .articles img{
     width: 200px;
     object-fit: cover;
     overflow: hidden;
 }
-
 .article-1, .article-2, .article-3{
     border: 1px solid;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-inline: 20px;
+    border: 1px solid;
+    padding-block: 20px;
 }
