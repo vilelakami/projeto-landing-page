@@ -1,1 +1,26 @@
 @import url(global.css);
+
+header{
+    border: 1px solid;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.titulo-principal{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    border: 1px solid;
+}
+.titulo-principal h1{
+    text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    font-size: 25px;
+    padding-block: 10px;
+}
+.titulo-principal img{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
