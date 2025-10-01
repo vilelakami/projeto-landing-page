@@ -3,5 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
+    list-style: none;   
+}
+img{
+    width: 200px;
+    height: 300px;  
 }

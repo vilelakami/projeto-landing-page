@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CULTURA MECÂNICA</title>
 
+    <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width: 430px)">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header>
-        <div class="titulo-principal">
+        <div class="header-principal">
             <img src="./assets/images/fundo.jpg" alt="logo">
-            <h1>CULTURA MECÂNICA</h1>
+            <button>contato</button>
         </div>
         <div class="nav-bar">
             <nav>
@@ -23,43 +24,64 @@
                         <a href="">Link 2</a>
                     </li>
                     <li>
-                        <a href="">Link 3</a>
+                        <a href="" download>Link 3</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section id="foto-principal">
+        <section id="principal">
             <img src="./assets/images/fundo.jpg" alt="foto principal">
-            <h1>titulo</h1>
-            <p>texto explicando a foto</p>
+            <div class="texto">
+                <h1>titulo</h1>
+                <p>texto explicando a foto</p>
+            </div>
         </section>
         <section id="destaques">
             <div class="info">apresentação/texto</div>
-            <div class="articles">
+            <h1>Principais Serviços</h1>
                 <article class="article-1">
                     <img src="./assets/images/fundo.jpg" alt="">
-                    <h2>texto</h2>
-                    <span>texto</span>
+                    <div class="article-text1">
+                        <h2>texto</h2>
+                        <span>texto</span>
+                    </div>
                 </article>
                 <article class="article-2">
                     <img src="./assets/images/fundo.jpg" alt="">
-                    <h2>texto</h2>
-                    <span>texto</span>
+                    <div class="article-text2">
+                        <h2>texto</h2>
+                        <span>texto</span>
+                    </div>
                 </article>
                 <article class="article-3">
                     <img src="./assets/images/fundo.jpg" alt="">
-                    <h2>texto</h2>
-                    <span>texto</span>
+                    <div class="article-text3">
+                        <h2>texto</h2>
+                        <span>texto</span>
                 </article>
             </div>
         </section>
     </main>
     <footer>
-        <div class="biografia"> BIOGRAFIA</div>
-        <div class="social-media"> REDES SOCIAIS</div>
-        <div class="mapa">MAPA</div>
+        <section id="footer">
+            <div class="biografia"> 
+                <img src="./assets/images/fundo.jpg" alt="foto do rosto">
+                <h2>Nome</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br> Iste eos maiores provident dolores, doloribus blanditiis <br>  natus aut ad laboriosam ipsam ea reiciendis? Provident<br> impedit rerum optio autem quae, dolorem quam?</p>
+            </div>
+            <div class="social-media"> 
+                <a href="">Instagram</a>
+                <a href="">TikTok</a>
+                <a href="">Youtube</a>
+                <a href="">Whatsapp</a>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.1715248016535!2d-46.70173632548303!3d-23.669823265584323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce515bb231b5ed%3A0x327b78892baef8e6!2zU2VuYWMgTmHDp8O1ZXMgVW5pZGFz!5e0!3m2!1spt-BR!2sbr!4v1759340635595!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <span>&copy; 2025 Cultura Mecânica</span>
     </footer>
 </body>
 </html>
