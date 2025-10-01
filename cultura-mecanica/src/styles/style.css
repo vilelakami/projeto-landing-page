@@ -73,6 +73,12 @@ header .nav-bar nav ul{
     margin: 20px;
     text-align: center;
 }
+article{
+    transition: transform 0.3s ease;
+}
+article:hover{
+    transform: scale(1.1);
+}
 
 footer{
     border: 1px solid;
