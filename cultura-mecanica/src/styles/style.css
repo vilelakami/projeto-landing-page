@@ -1,85 +1,114 @@
 @import url(global.css);
 
-header{
+/* === CABEÇALHO === */
+header {
     width: 100%;
     height: 3.69rem;
-    background-color: var(--bg-color-primary);
     display: flex;
+    background-color: var(--bg-color-primary);
 }
-/* grupo de endereço, disponibilidade e as redes sociais */
-.address, .days, .social-media{
+@media (max-width: 1024px){
+    header{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px){
+    header{
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px){
+    header{
+        font-size: 0.75rem;
+    }
+}    /* --- Grupo de endereço, disponibilidade e redes sociais --- */
+.address,
+.days,
+.social-media {
     display: flex;
     align-items: center;
-    margin-left: 2.56rem;
-    margin-block: 0.8rem;
-    gap: 0.25rem;
+    margin-block: 0.8em;
+    margin-left: 2.56em;
+    gap: 0.25em;
 }
-.social-media{
-    gap: 0.5rem;
-    margin-left: 25rem;
-    
+/* Ajustes individuais */
+.days {
+    margin-left: 2.38em;
 }
-.days{
-    margin-left: 2.38rem;
+
+.social-media {
+    gap: 0.5em;
+    margin-left: 20%;
 }
-.address, .days p{
+
+/* --- Texto --- */
+.address p,
+.days p {
     color: var(--txt-color-primary);
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-family: var(--font-family-primary);
-    font-weight: var(txt-font-primary-weight);
+    font-weight: var(--txt-font-primary-weight);
 }
-.address img{
-    width: 2.125rem;
-    height: 2.125rem;
+/* --- Ícones --- */
+.address img,
+.days img {
+    width: 2.125em;
+    height: 2.125em;
 }
-.days img{
-    width: 2.125rem;
-    height: 2.125rem;
+.social-media img {
+    width: 2em;
+    height: 2em;
 }
-.social-media .instagram img{
-    width: 3rem;
-    height: 2.3rem;
+
+.social-media .instagram img {
+    width: 3em;
+    height: 2.3em;
 }
-.social-media .facebook img{
-    margin-right: 0.3rem;
-    width: 2rem;
-    height: 2rem;
+
+.social-media .facebook img {
+    margin-right: 0.3em;
 }
-.social-media .google img{
-    width: 2rem;
-    height: 2rem;
-}
-hero-header{
+
+/* === SEÇÃO PRINCIPAL === */
+main {
     width: 100vw;
     height: 100vh;
 }
-hero-header .topo{
+
+/* --- Barra de navegação superior --- */
+main .topo {
     position: relative;
-    width: 100%;
-    height: 3.69rem;
-    margin-top: 3.25rem;
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+    height: 3.69em;
+    margin-top: 3.25em;
     background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
 }
-.topo nav ul{
-    display: flex;
-    gap: 4em;
-    align-items: center;
-    margin-block: 0.94rem;
-    margin-left: 12.2rem;  
-}
-.topo img{
+
+/* --- Logo --- */
+.topo img {
     position: absolute;
-    z-index: 10;
-    width: 11.2rem;
+    top: -2.2em;
+    left: 4.5em;
+    width: 11.2em;
     height: auto;
-    left: 4.5rem;
-    top: -2.2rem;
+    z-index: 10;
 }
-.topo nav ul li a{
+
+/* --- Menu de navegação --- */
+.topo nav ul {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    margin-block: 0.94em;
+    margin-left: 25em;  
+}
+
+.topo nav ul li a {
     color: var(--txt-color-primary);
-    font-size: 1.5rem;
-    font-weight: var(--text-font-primary-weight);
     font-family: var(--font-family-secondary);
+    font-size: 1.5em;
+    font-weight: var(--text-font-primary-weight);
 }
