@@ -1,11 +1,14 @@
-*{
+*, html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;   
 }
-img{
-    width: 200px;
-    height: 300px;  
+:root{
+    --bg-color-primary: #000000;
+
+
+
+    --txt-color-primary: #ffffff;
+    --font-family-primary:  'Inter', sans-serif;
+    --text-font-primary-weight: 700;
 }
