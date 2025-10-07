@@ -14,8 +14,9 @@ header{
     gap: 0.25rem;
 }
 .social-media{
-    gap: 0.37rem;
-    margin-right: 4.31rem;
+    gap: 0.5rem;
+    margin-left: 25rem;
+    
 }
 .days{
     margin-left: 2.38rem;
@@ -39,6 +40,7 @@ header{
     height: 2.3rem;
 }
 .social-media .facebook img{
+    margin-right: 0.3rem;
     width: 2rem;
     height: 2rem;
 }
