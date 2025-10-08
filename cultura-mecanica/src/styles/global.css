@@ -21,17 +21,26 @@
 body{
     background-color: grey;
 }
-/* botão de voltar e next */
-.carousel-nav-icon {
-   height: 1.3rem;
-   width: 1.3rem;
-   background-color: #727272;
+.carousel-img {
+    width: 20rem;          
+    height: 25rem;          
+    background-color: white; /* cor de fundo temporária */
+    border-radius: 10px;
 }
-.carousel-item {
-   .col, .col-sm, .col-md {
-      margin: 8px;
-      height: 300px;
-      background-size: cover;
-      background-position: center center;
-   }
+
+.carousel-nav-icon {
+    width: 2rem;             
+    height: 2rem;
+    background-color: #727272; 
+    border-radius: 50%; 
+    padding: 20px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carousel-nav-icon img {
+    width: 20px;             /* tamanho do ícone */
+    height: 20px;
 }

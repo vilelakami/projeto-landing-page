@@ -74,61 +74,48 @@
                     <span>-</span>
                     <h1>SERVIÇOS</h1>
                 </div>
-                <div class="my-5 text-center container">
-                    <div class="row d-flex align-items-center">
+                <div class="my-5 container">
+        <div class="d-flex align-items-center justify-content-center">
 
-                        <!-- botão de voltar -->
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <a href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <div class="carousel-nav-icon">
-                                    <img src="./assets/images/icons/prev.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Carousel -->
-                        <div class="col-10">
-                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <!-- Imagens do carousel de ínicio -->
-                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
-                                            </div>
-                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
-                                            </div>
-                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
-                                            </div>
-                                        </div>
-                                    </div>
-                                           <!-- Imagens do carousel depois de apertar a seta --> 
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
-                                            </div>
-                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
-                                            </div>
-                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- botão de avançar -->
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <a href="#carouselExampleIndicators" data-slide="next">
-                                <div class="carousel-nav-icon">
-                                    <img src="./assets/images/icons/next.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
+            <!-- Botão de voltar -->
+            <div class="me-3">
+                <div class="carousel-nav-icon" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <img src="./assets/images/icons/prev.png" alt="Voltar">
                 </div>
+            </div>
+
+            <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide flex-grow-1" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center gap-3">
+                            <div class="carousel-img"></div>
+                            <div class="carousel-img"></div>
+                            <div class="carousel-img"></div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center gap-3">
+                            <div class="carousel-img"></div>
+                            <div class="carousel-img"></div>
+                            <div class="carousel-img"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Botão de avançar -->
+            <div class="ms-3">
+                <div class="carousel-nav-icon" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <img src="./assets/images/icons/next.png" alt="Avançar">
+                </div>
+            </div>
+
+        </div>
+    </div>
             </section>
         </main>
 </body>
