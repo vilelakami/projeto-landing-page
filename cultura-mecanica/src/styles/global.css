@@ -13,5 +13,11 @@
     --txt-color-primary: #ffffff;
     --font-family-primary:  'Inter', sans-serif;
     --text-font-primary-weight: 700;
-    --font-family-secondary: 'Montserrat', sans-serif
+    --font-family-secondary: 'Montserrat', sans-serif;
+    --font-family-title: 'Bebas Neue', sans-serif;
+    --font-title-weight: 400;
+
+}
+body{
+    background-color: grey;
 }
