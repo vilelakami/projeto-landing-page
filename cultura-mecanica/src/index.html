@@ -3,6 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,35 +38,99 @@
                 </div>
         </header>
         <main>
-            <div class="topo">
-                <img src="./assets/images/icons/logo-cultura-mecanica.png" alt="logotipo da empresa em branco e laranja, estilo hiphop escrito "CULTURA MECÂNICA">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="">SERVIÇOS</a>
-                        </li>
-                        <li>
-                            <a href="">LOCALIZAÇÃO</a>
-                        </li>
-                        <li>
-                            <a href="">QUEM SOMOS</a>
-                        </li>
-                        <li>
-                            <a href="">CONTATO</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <img src="" alt=""> <!-- img dele -->
-            <div class="principal-title">
-                <h1>SEU CÂMBIO <br><span class="title-color1"><span class="title-color2">EM</span> BOAS MÃOS</span></h1>
-                <p>Sua mecânica favorita está ao alcance de um clique.<br>
-                    Consulte nossos serviços on-line de forma fácil e rápida</p>
-                <button>
-                    <h2>FAÇA AGORA MESMO O <span class="title-color3">SEU ORÇAMENTO</span></h2>
-                    <img src="./assets/images/icons/arrow-up.png" alt="setinha para cima inclinaa para direita na cor laranja">
-                </button>
-            </div>
+            <section id="call-to-action">
+                <div class="topo">
+                    <img src="./assets/images/icons/logo-cultura-mecanica.png" alt="logotipo da empresa em branco e laranja, estilo hiphop escrito "CULTURA MECÂNICA">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="">SERVIÇOS</a>
+                            </li>
+                            <li>
+                                <a href="">LOCALIZAÇÃO</a>
+                            </li>
+                            <li>
+                                <a href="">QUEM SOMOS</a>
+                            </li>
+                            <li>
+                                <a href="">CONTATO</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <img src="" alt=""> <!-- img dele -->
+                <div class="principal-title">
+                    <h1>SEU CÂMBIO <br><span class="title-color1"><span class="title-color2">EM</span> BOAS MÃOS</span></h1>
+                    <p>Sua mecânica favorita está ao alcance de um clique.<br>
+                        Consulte nossos serviços on-line de forma fácil e rápida</p>
+                    <button>
+                        <h2>FAÇA AGORA MESMO O <span class="title-color3">SEU ORÇAMENTO</span></h2>
+                        <img src="./assets/images/icons/arrow-up.png" alt="setinha para cima inclinaa para direita na cor laranja">
+                    </button>
+                </div>
+            </section>
+            <section id="servicos">
+                <div class="title-section2">
+                    <span>-</span>
+                    <h1>SERVIÇOS</h1>
+                </div>
+                <div class="my-5 text-center container">
+                    <div class="row d-flex align-items-center">
+
+                        <!-- botão de voltar -->
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <div class="carousel-nav-icon">
+                                    <img src="./assets/images/icons/prev.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Carousel -->
+                        <div class="col-10">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <!-- Imagens do carousel de ínicio -->
+                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                            </div>
+                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                            </div>
+                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                           <!-- Imagens do carousel depois de apertar a seta --> 
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                            </div>
+                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                            </div>
+                                            <div style="background-color: white;" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- botão de avançar -->
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <a href="#carouselExampleIndicators" data-slide="next">
+                                <div class="carousel-nav-icon">
+                                    <img src="./assets/images/icons/next.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </main>
 </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
