@@ -8,22 +8,24 @@ header {
     justify-content: space-between;
     background-color: var(--bg-color-primary);
 }
-@media (max-width: 1024px){
-    header{
+
+@media (max-width: 1024px) {
+    header {
         font-size: 0.9rem;
     }
 }
-@media (max-width: 768px){
-    header{
+
+@media (max-width: 768px) {
+    header {
         font-size: 0.875rem;
     }
 }
 
-@media (max-width: 480px){
-    header{
+@media (max-width: 480px) {
+    header {
         font-size: 0.75rem;
     }
-} 
+}
 
 body {
     background-image: url(/cultura-mecanica/src/assets/images/icons/Background.png);
@@ -32,6 +34,7 @@ body {
     background-repeat: no-repeat;
 
 }
+
 /* --- Grupo de endereço, disponibilidade e redes sociais --- */
 .info-address {
     font-family: var(--font-family-primary);
@@ -42,39 +45,46 @@ body {
     padding-block: 0.8rem;
     padding-left: 2.56rem;
 }
+
 .info-address span {
     color: white;
     width: 25em;
     display: flex;
     gap: 10px;
 }
+
 .social-media {
     display: flex;
     gap: 10px;
     margin-right: 2%;
     align-items: center;
 }
+
 /* --- Ícones --- */
-.info-address img{
+.info-address img {
     width: 34px;
     height: 30px;
 }
+
 .social-media img {
     width: 2em;
     height: 2em;
 }
+
 .social-media .instagram img {
     width: 3em;
     height: 2.3em;
 }
+
 .social-media .facebook img {
     margin-right: 0.5rem;
 }
 
 /* --- Barra de navegação superior --- */
-#call-to-action{
+#call-to-action {
     height: 100vh;
 }
+
 #call-to-action nav ul {
     margin-top: 2em;
     position: relative;
@@ -90,48 +100,66 @@ body {
     background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
     padding-right: 2%;
 }
-#call-to-action nav ul li a{
+
+#call-to-action nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 /* --- Logo --- */
-#call-to-action .logotipo{
+#call-to-action .logotipo {
     position: absolute;
     left: 5em;
     top: 4.5em;
-    width: 12em; 
+    width: 12em;
     height: auto;
     z-index: 10;
 }
+
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
-#call-to-action div{
+#call-to-action div {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 34em;
     margin-top: 5em;
 }
-#call-to-action div img{
+
+#call-to-action div img {
     width: 524px;
     height: 524px;
 }
-#call-to-action div span h1,h2{
+
+#call-to-action div span h1,
+h2 {
     font-family: var(--font-family-title);
     color: white;
     font-size: 7em;
     line-height: 90%;
     text-align: center;
 }
-#call-to-action div span h1{
+
+#call-to-action div span h1 {
     font-size: 9em;
 }
-#call-to-action div span .title-color1, .title-color2{
+
+#call-to-action div span .title-color1,
+.title-color2 {
     color: #FF8929;
 }
-#servicos{
+
+#servicos {
     border: 1px solid;
     margin-top: 2rem;
 }
 
-
+.title-section2 {
+    color: #FFF;
+    text-align: right;
+    font-family: "Bebas Neue";
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
