@@ -162,14 +162,6 @@ body {
     line-height: normal;
 }
 
-.mecanico {
-    position: relative;
-}
-
-.mecanico img {
-    position: absolute;
-}
-
 .img-mecanico {
-    width: 200rem;
+    position: absolute;
 }
