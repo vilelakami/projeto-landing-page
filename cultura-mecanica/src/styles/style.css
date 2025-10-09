@@ -124,15 +124,14 @@ body {
     width: 100%;
     height: 34em;
     margin-top: 5em;
+    padding-top: 1.5em;
 }
 
 #call-to-action div img {
     width: 524px;
-    height: 524px;
+    height: 500px;
 }
-
-#call-to-action div span h1,
-h2 {
+#call-to-action div span h1,h2{
     font-family: var(--font-family-title);
     color: white;
     font-size: 7em;
@@ -148,8 +147,7 @@ h2 {
 .title-color2 {
     color: #FF8929;
 }
-
-#servicos {
+#servicos{
     border: 1px solid;
     margin-top: 2rem;
 }
