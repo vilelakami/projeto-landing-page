@@ -161,3 +161,15 @@ body {
     font-weight: 400;
     line-height: normal;
 }
+
+.mecanico {
+    position: relative;
+}
+
+.mecanico img {
+    position: absolute;
+}
+
+.img-mecanico {
+    width: 200rem;
+}
