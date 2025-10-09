@@ -23,7 +23,15 @@ header {
     header{
         font-size: 0.75rem;
     }
-}    
+} 
+
+body {
+    background-image: url(/cultura-mecanica/src/assets/images/icons/Background.png);
+    background-color: #424242;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+
+}
 /* --- Grupo de endereço, disponibilidade e redes sociais --- */
 .info-address {
     font-family: var(--font-family-primary);
@@ -84,6 +92,7 @@ header {
 }
 #call-to-action nav ul li a{
     color: white;
+    text-decoration: none;
 }
 /* --- Logo --- */
 #call-to-action .logotipo{
