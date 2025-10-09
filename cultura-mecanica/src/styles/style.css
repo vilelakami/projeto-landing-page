@@ -118,7 +118,6 @@ body {
 
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
 #call-to-action div {
-    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.2);
@@ -134,19 +133,21 @@ body {
 }
 #call-to-action div span h1,
 #call-to-action div span h2{
-    border: 1px solid;
     width: 7em;
     font-family: var(--font-family-title);
     color: white;
     font-size: 9em;
     line-height: 90%;
-    text-align: center;
 }
 
 #call-to-action div span h1 {
     font-size: 9em;
+    text-align: center;
 }
-
+#call-to-action div span .title-color3{
+    font-size: 9.5em;
+    color: #FF8929;
+}
 #call-to-action div span .title-color1,
 .title-color2 {
     color: #FF8929;
