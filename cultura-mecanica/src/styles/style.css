@@ -63,108 +63,62 @@ header {
     margin-right: 0.5rem;
 }
 
-/* === SEÇÃO PRINCIPAL === */
-main {
-    width: 100vw;
-    height: 100vh;
-}
 /* --- Barra de navegação superior --- */
-main .topo {
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 3.69em;
-    margin-top: 3.25rem;
-    background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
-}
 #call-to-action{
     height: 100vh;
 }
+#call-to-action nav ul {
+    margin-top: 2em;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 2.5em;
+    font-family: var(--font-family-secondary);
+    font-weight: var(--text-font-primary-weight);
+    font-size: 1.5em;
+    background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
+    padding-right: 2%;
+}
+#call-to-action nav ul li a{
+    color: white;
+}
 /* --- Logo --- */
-.topo img {
+#call-to-action .logotipo{
     position: absolute;
-    top: -2.2em;
-    left: 4.5em;
-    width: 11.2em;
+    left: 5em;
+    top: 4.5em;
+    width: 12em; 
     height: auto;
     z-index: 10;
 }
-
-/* --- Menu de navegação --- */
-.topo nav ul {
-    display: flex;
-    align-items: center;
-    gap: 4em;
-    padding-block: 0.94rem;
-    padding-left: 25em;   /* VERIFICAR */
-}
-
-.topo nav ul li a {
-    color: var(--txt-color-primary);
-    font-family: var(--font-family-secondary);
-    font-size: 1.5em;
-    font-weight: var(--text-font-primary-weight);
-}
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
-.principal-title{
+#call-to-action div{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
-    padding-right: 3.81rem;
-    padding-top: 5em;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 34em;
+    margin-top: 5em;
 }
-.principal-title h1{
+#call-to-action div img{
+    width: 524px;
+    height: 524px;
+}
+#call-to-action div span h1,h2{
     font-family: var(--font-family-title);
-    font-weight: var(--font-title-weight);
-    line-height: 75%;
-    font-size: 12em;
     color: white;
-    text-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
-
-}
-.principal-title h1 .title-color1{
-    color: #FF8929;
-    font-size: 0.8em;
-
-}
-.principal-title h1 .title-color2{
-    color: white;
-    font-size: 1em;
-}
-.principal-title p{
-    width: 42rem;
-    height: 5rem;
+    font-size: 7em;
+    line-height: 90%;
     text-align: center;
-    font-family: var(--font-family-secondary);
-    font-weight: 400;
-    font-size: 1.5em;
-    margin-left: auto;
-    align-self: flex-end;
 }
-.principal-title button{
-    margin-right: 0.2em;
-    font-family: var(--font-family-title);
-    font-size: 2em;
+#call-to-action div span h1{
+    font-size: 9em;
+}
+#call-to-action div span .title-color1, .title-color2{
     color: #FF8929;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 0.91em;
-    padding-block: 0.2em;
-    gap: 0.4em;
-    border-radius: 0.5rem;
-    border: 3px solid white;
-    background-color: transparent;
-}
-.principal-title button img{
-    width: 1.2em;
-    height: 1em;
-}
-.principal-title button span{
-    color: white;
 }
 #servicos{
     border: 1px solid;
