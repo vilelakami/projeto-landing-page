@@ -101,18 +101,19 @@ header {
     background-color: rgba(0,0,0,0.2);
     width: 100%;
     height: 34em;
-    margin-top: 5em;
+    margin: 0;
     padding-top: 1.5em;
 }
 #call-to-action div img{
     width: 524px;
     height: 500px;
 }
-#call-to-action div span h1,h2{
-    width: 50rem;
+#call-to-action div span h1,
+#call-to-action div span h2{
+    width: 65rem;
     font-family: var(--font-family-title);
     color: white;
-    font-size: 7em;
+    font-size: 9em;
     line-height: 90%;
     text-align: center;
 }
@@ -123,7 +124,9 @@ header {
     color: #FF8929;
 }
 button{
+    width: 45rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     border: 1px solid white ;
     font-size: 0.4em;
