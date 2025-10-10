@@ -133,6 +133,7 @@ body {
     color: white;
     font-size: 9em;
     line-height: 90%;
+    
 }
 #call-to-action div span h1 {
     font-size: 9em;
@@ -149,18 +150,21 @@ body {
     color: #FF8929;
 }
 #call-to-action div span a{
-    width: 55em;
+    background-color: #424242;
+    width: 777px;
     display: flex;
     font-family: var(--font-family-title);
     color: white;
     gap: 15px;
     align-items: center;
     border: 1px solid white;
+    border-radius: 16px;
     text-decoration: none;
 }
 #call-to-action div span a h3{
     font-size: 5em;
-    padding: 5px 15px;
+    padding-block: 10px;
+    padding-inline: 13px;
 }
 #servicos{
     margin-top: 2rem;
