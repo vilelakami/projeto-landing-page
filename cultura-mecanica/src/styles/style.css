@@ -29,11 +29,10 @@ header {
 }
 
 body {
-    background-image: url(/cultura-mecanica/src/assets/images/icons/Background.png);
+    background-image: url(/src/assets/images/icons/Background.png);
     background-color: #424242;
     background-size: 100vw;
     background-repeat: no-repeat;
-
 }
 
 /* --- Grupo de endereço, disponibilidade e redes sociais --- */
@@ -164,7 +163,6 @@ body {
     padding: 5px 15px;
 }
 #servicos{
-    border: 1px solid;
     margin-top: 2rem;
 }
 
