@@ -131,8 +131,9 @@ body {
     width: 524px;
     height: 500px;
 }
+
 #call-to-action div span h1,
-#call-to-action div span h2{
+#call-to-action div span h2 {
     width: 7em;
     font-family: var(--font-family-title);
     color: white;
@@ -144,39 +145,58 @@ body {
     font-size: 9em;
     text-align: center;
 }
-#call-to-action div span .title-color3{
+
+#call-to-action div span .title-color3 {
     font-size: 9.5em;
     color: #FF8929;
 }
+
 #call-to-action div span .title-color1,
 .title-color2 {
     color: #FF8929;
 }
-button{
+
+button {
     width: 50rem;
     display: flex;
     align-items: center;
-    border: 1px solid white ;
+    border: 1px solid white;
     font-size: 0.4em;
     background-color: #2D2D2D;
     border-radius: 5px;
     padding: 0.75em 1.75em;
 }
-#servicos{
-    border: 1px solid;
+
+#servicos {
     margin-top: 2rem;
 }
 
 .title-section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #FFF;
-    text-align: right;
     font-family: "Bebas Neue";
-    font-size: 180px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
-.img-mecanico {
-    position: absolute;
+.title-section2 img {
+    width: 51rem;
+}
+.title-section2 h1 {
+ font-size: 180px;
+ margin-right: 50px;
+}
+
+.carousel-nav-icon {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+}
+
+.carousel-nav-icon img {
+    height: 45px;
+    width: 45px;
+    stroke: #FF8929;
+    stroke-width: 8px;
 }
