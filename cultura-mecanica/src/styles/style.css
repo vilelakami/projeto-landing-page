@@ -7,6 +7,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-color-primary);
+    padding-inline: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -42,8 +43,7 @@ body {
     font-size: 1.2em;
     width: 100%;
     display: flex;
-    padding-block: 0.8rem;
-    padding-left: 2.56rem;
+    align-items: center;
 }
 
 .info-address span {
@@ -56,7 +56,6 @@ body {
 .social-media {
     display: flex;
     gap: 10px;
-    margin-right: 2%;
     align-items: center;
 }
 
@@ -76,17 +75,20 @@ body {
     height: 2.3em;
 }
 
-.social-media .facebook img {
-    margin-right: 0.5rem;
-}
 
 /* --- Barra de navegação superior --- */
 #call-to-action {
     height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "A"
+    "B"
+    ;
 }
 
-#call-to-action nav ul {
+#call-to-action nav{
     margin-top: 2em;
+    grid-area: A;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -98,10 +100,9 @@ body {
     font-weight: var(--text-font-primary-weight);
     font-size: 1.5em;
     background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
-    padding-right: 2%;
 }
 
-#call-to-action nav ul li a {
+#call-to-action nav a {
     color: white;
     text-decoration: none;
 }
@@ -118,20 +119,14 @@ body {
 
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
 #call-to-action div {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 34em;
-    margin: 0;
-    padding-top: 1.5em;
-}
-
-#call-to-action div img {
-    width: 524px;
-    height: 500px;
-}
-
+} 
 #call-to-action div span h1,
 #call-to-action div span h2 {
     width: 7em;
@@ -140,7 +135,6 @@ body {
     font-size: 9em;
     line-height: 90%;
 }
-
 #call-to-action div span h1 {
     font-size: 9em;
     text-align: center;
@@ -155,19 +149,22 @@ body {
 .title-color2 {
     color: #FF8929;
 }
-
-button {
-    width: 50rem;
+#call-to-action div span a{
+    width: 55em;
     display: flex;
+    font-family: var(--font-family-title);
+    color: white;
+    gap: 15px;
     align-items: center;
     border: 1px solid white;
-    font-size: 0.4em;
-    background-color: #2D2D2D;
-    border-radius: 5px;
-    padding: 0.75em 1.75em;
+    text-decoration: none;
 }
-
-#servicos {
+#call-to-action div span a h3{
+    font-size: 5em;
+    padding: 5px 15px;
+}
+#servicos{
+    border: 1px solid;
     margin-top: 2rem;
 }
 
@@ -182,21 +179,22 @@ button {
 .title-section2 img {
     width: 51rem;
 }
+#call-to-action .img-mecanico {
+    position: absolute;
+    left: 40px;
+    width: 35rem;
+    height: 33rem;
+    bottom: 15px;
+}
+#call-to-action .elipse-img-mecanico{
+    margin-left: 65px;
+    width: 32rem;
+    height: 30rem;
+    margin-top: 20px;
+}
 .title-section2 h1 {
  font-size: 180px;
  margin-right: 50px;
 }
 
-.carousel-nav-icon {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    width: 80px;
-}
 
-.carousel-nav-icon img {
-    height: 45px;
-    width: 45px;
-    stroke: #FF8929;
-    stroke-width: 8px;
-}
