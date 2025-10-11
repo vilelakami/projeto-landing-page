@@ -1,9 +1,13 @@
-*, html{
+*, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     list-style: none;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
 }
 :root{
     --bg-color-primary: #000000;
@@ -18,19 +22,22 @@
     --font-title-weight: 400;
 
 }
-body{
-    background-color: grey;
+body {
+    background-image: url(/src/assets/images/icons/Background.png);
+    background-color: #424242;
+    background-size: 100vw;
+    background-repeat: no-repeat;
 }
+/* carrossel de imagens do bootstrap */
 .carousel-img {
     width: 20rem;          
     height: 25rem;          
     background-color: white; /* cor de fundo temporária */
     border-radius: 10px;
 }
-
 .carousel-nav-icon {
-    width: 2rem;             
-    height: 2rem;
+    height: 80px;
+    width: 80px;
     background-color: #727272; 
     border-radius: 50%; 
     padding: 20px;    
@@ -39,8 +46,9 @@ body{
     justify-content: center;
     cursor: pointer;
 }
-
 .carousel-nav-icon img {
-    width: 20px;             /* tamanho do ícone */
-    height: 20px;
+    height: 45px;
+    width: 45px;
+    stroke: #FF8929;
+    stroke-width: 8px;
 }

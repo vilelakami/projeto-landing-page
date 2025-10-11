@@ -7,134 +7,165 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-color-primary);
+    font-family: var(--font-family-primary);
+    font-weight: var(--text-font-primary-weight);
+    font-size: 1.2em;
+    padding-inline: 20px;
 }
-@media (max-width: 1024px){
-    header{
+
+@media (max-width: 1024px) {
+    header {
         font-size: 0.9rem;
     }
 }
-@media (max-width: 768px){
-    header{
+
+@media (max-width: 768px) {
+    header {
         font-size: 0.875rem;
     }
 }
 
-@media (max-width: 480px){
-    header{
+@media (max-width: 480px) {
+    header {
         font-size: 0.75rem;
     }
-}    
+}
+
 /* --- Grupo de endereço, disponibilidade e redes sociais --- */
 .info-address {
-    font-family: var(--font-family-primary);
-    font-weight: var(--text-font-primary-weight);
-    font-size: 1.2em;
-    width: 100%;
     display: flex;
-    padding-block: 0.8rem;
-    padding-left: 2.56rem;
+    align-items: center;
+    gap: 15px;
 }
 .info-address span {
     color: white;
-    width: 25em;
+    width: fit-content;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
 }
 .social-media {
     display: flex;
-    gap: 10px;
-    margin-right: 2%;
     align-items: center;
+    gap: 5px;
 }
-/* --- Ícones --- */
-.info-address img{
-    width: 34px;
-    height: 30px;
-}
-.social-media img {
-    width: 2em;
-    height: 2em;
-}
-.social-media .instagram img {
-    width: 3em;
-    height: 2.3em;
-}
-.social-media .facebook img {
-    margin-right: 0.5rem;
-}
-
 /* --- Barra de navegação superior --- */
-#call-to-action{
+#call-to-action {
+    width: 100%;
     height: 100vh;
-}
-#call-to-action nav ul {
-    margin-top: 2em;
-    position: relative;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 50px;
+    flex-direction: column;
+    gap: 3em;
+    padding-top: 60px;
+}
+#call-to-action nav{
     width: 100%;
     height: 2.5em;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    padding: 30px;
+    gap: 60px;
+    background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
+}
+#call-to-action nav a {
     font-family: var(--font-family-secondary);
     font-weight: var(--text-font-primary-weight);
     font-size: 1.5em;
-    background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
-    padding-right: 2%;
-}
-#call-to-action nav ul li a{
     color: white;
+    text-decoration: none;
 }
 /* --- Logo --- */
-#call-to-action .logotipo{
+#call-to-action .logotipo {
     position: absolute;
-    left: 5em;
-    top: 4.5em;
-    width: 12em; 
+    left: 3rem;
+    width: 13em;
     height: auto;
     z-index: 10;
 }
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
-#call-to-action div{
+#call-to-action > div {
+    width: 100%;
+    height: 35rem;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0.2);
-    width: 100%;
-    height: 34em;
-    margin-top: 5em;
-    padding-top: 1.5em;
-}
-#call-to-action div img{
-    width: 524px;
-    height: 500px;
-}
-#call-to-action div span h1,h2{
-    width: 50rem;
-    font-family: var(--font-family-title);
-    color: white;
-    font-size: 7em;
-    line-height: 90%;
-    text-align: center;
-}
-#call-to-action div span h1{
-    font-size: 9em;
-}
-#call-to-action div span .title-color1, .title-color2{
-    color: #FF8929;
-}
-button{
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+} 
+#call-to-action div > span{
     display: flex;
     align-items: center;
-    border: 1px solid white ;
-    font-size: 0.4em;
-    background-color: #2D2D2D;
-    border-radius: 5px;
-    padding: 0.75em 1.75em;
+    flex-direction: column;
+    font-family: var(--font-family-title);
+    padding-right: 30px;
 }
+/* textos */
+#call-to-action .title-line1, .title-line3{color: white;}
+#call-to-action .title-line2, .title-line3 .color3{ color: #FF8929;}
+#call-to-action .title-line1{
+    font-size: 7.6em;
+    line-height: 70%;
+}
+#call-to-action .title-line2{font-size: 8em;}
+#call-to-action .title-line3{
+    display: flex;
+    align-items: center;
+    font-size: 9.5em;
+    gap: 30px;
+}
+/* img do mecanico com o fundo redondo (teremos uma imagem só ao invésde duas) */
+#call-to-action .img-mecanico {
+    position: absolute;
+    left: 40px;
+    width: 35rem;
+    height: 33rem;
+    bottom: 15px;
+}
+/* por enquanto só pra deixar a img do mecanico com efeito */
+#call-to-action .elipse-img-mecanico{
+    margin-left: 65px;
+    width: 32rem;
+    height: 30rem;
+    margin-top: 20px;
+}
+/* botão */
+#call-to-action div span button{
+    background-color: #2D2D2D;
+    border: 3px solid white;
+    border-radius: 16px;
+    padding-inline: 10px;
+}
+#call-to-action div span button a{
+    text-decoration: none;
+}
+#call-to-action div span button a h3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 4.5em;
+    color: white;
+}
+/* seção de serviços e bootstrap */
 #servicos{
     width: 100%;
     height: 100vh;
-    margin-top: 2rem;
+    margin-top: 10rem;
+}
+#servicos .title-section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    font-family: "Bebas Neue";
+}
+#servicos .title-section2 img {
+    width: 51rem;
+}
+#servicos .title-section2 h1 {
+    font-size: 11.2em;
+    margin-right: 0.2em;
 }
 
 
