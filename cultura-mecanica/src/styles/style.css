@@ -55,7 +55,7 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 4em;
     padding-top: 60px;
 }
 #call-to-action nav{
@@ -89,7 +89,7 @@ header {
     width: 100%;
     height: 35rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
     background-color: rgba(0, 0, 0, 0.2);
@@ -98,15 +98,17 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: var(--font-family-title);
-    padding-right: 30px;
+    font-family: var(--font-family-title);  
+    gap: 30px;
+    margin-top: 50px;
+    margin-right: 20px;
 }
 /* textos */
-#call-to-action .title-line1, .title-line3{color: white;}
+#call-to-action .title-line1, .title-line3{color: white; line-height: 70%;}
 #call-to-action .title-line2, .title-line3 .color3{ color: #FF8929;}
 #call-to-action .title-line1{
     font-size: 7.6em;
-    line-height: 70%;
+    line-height: 10%;
 }
 #call-to-action .title-line2{font-size: 8em;}
 #call-to-action .title-line3{
@@ -114,14 +116,6 @@ header {
     align-items: center;
     font-size: 9.5em;
     gap: 30px;
-}
-/* img do mecanico com o fundo redondo (teremos uma imagem só ao invésde duas) */
-#call-to-action .img-mecanico {
-    position: absolute;
-    left: 40px;
-    width: 35rem;
-    height: 33rem;
-    bottom: 15px;
 }
 /* por enquanto só pra deixar a img do mecanico com efeito */
 #call-to-action .elipse-img-mecanico{
