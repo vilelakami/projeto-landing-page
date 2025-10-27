@@ -178,6 +178,14 @@ header {
     font-size: 9.5em;
     margin-left: 0.2em;
 }
+#about .texto{
+    display: flex;
+    align-items: flex-start;
+}
+#about .texto img{
+    width: 753px;
+    height: 753px;
+}
 
 
 
