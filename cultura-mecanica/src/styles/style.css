@@ -159,4 +159,25 @@ header {
     margin-right: 0.2em;
 }
 
+#about{
+    width: 100%;
+    height: 100vh;
+    margin-top: 10rem;
+}
+#about .title-section3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#FF8929;
+    font-family: "Bebas Neue";
+}
+#about .title-section3 img {
+    width: 41rem;
+}
+#about .title-section3 h1 {
+    font-size: 9.5em;
+    margin-left: 0.2em;
+}
+
+
 
