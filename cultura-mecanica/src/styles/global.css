@@ -35,6 +35,10 @@ body {
     background-color: white; /* cor de fundo temporária */
     border-radius: 10px;
 }
+
+.foto-1, .foto-2{
+    border-radius: 10px;
+}
 .carousel-nav-icon {
     height: 80px;
     width: 80px;
