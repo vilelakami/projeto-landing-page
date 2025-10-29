@@ -55,7 +55,6 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 4em;
     padding-top: 60px;
 }
 #call-to-action nav{
@@ -87,8 +86,10 @@ header {
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
 #call-to-action > div {
     background-image: url('../assets/images/icons/hero-headerr.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 100%;
-    height: 27rem;
+    height: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -144,7 +145,8 @@ header {
     height: 100vh;
     margin-top: 10rem;
 }
-#servicos .title-section2 {
+#servicos .title-section2,
+#avaliacoes .title-section2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,17 +156,20 @@ header {
 #servicos .title-section2 img {
     width: 51rem;
 }
-#servicos .title-section2 h1 {
+#servicos .title-section2 h1,
+#avaliacoes .title-section2 h1 {
     font-size: 9.5em;
     margin-right: 0.2em;
 }
 
+/* verificar unidades de medidas */
 #about{
     width: 100%;
     height: 100vh;
     margin-top: 10rem;
 }
-#about .title-section3 {
+#about .title-section3,
+#localizacao .title-section3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,7 +179,8 @@ header {
 #about .title-section3 img {
     width: 41rem;
 }
-#about .title-section3 h1 {
+#about .title-section3 h1,
+#localizacao .title-section3 h1 {
     font-size: 9.5em;
     margin-left: 0.2em;
 }
@@ -185,6 +191,11 @@ header {
 #about .texto img{
     width: 753px;
     height: 753px;
+}
+
+footer{
+    background-color: black;
+    display: flex;
 }
 
 
