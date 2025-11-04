@@ -189,14 +189,86 @@ header {
     align-items: flex-start;
 }
 #about .texto img{
-    width: 753px;
-    height: 753px;
+    width: 700px;
+    height: 700px;
 }
-
-footer{
-    background-color: black;
+footer{background-color: black;}
+.footer-elements{
     display: flex;
+    gap: 120px;
+    padding-top: 20px;
 }
 
+footer .cambio{
+    width: 259px;
+    height: 300px;
+}
+footer .ecologia{
+    width: 254px;
+    height: 254px;
+}
+.social-media-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family-primary);
+    color: white;
+}
+.facebook > img{
+    width: 38px;
+    height: 35px;
+}
+.social-media-footer .instagram,
+.social-media-footer .facebook{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;    
+}
+.social-media-footer .facebook{gap: 20px;}
+.social-media-footer .instagram a,
+.social-media-footer .facebook a{text-decoration: none; color: white;}
 
+.contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-family-primary);
+    color: white;
+    font-size: 1.2rem;
+}
+.acesso-rapido{
+    font-family: var(--font-family-primary);
+    color: #FFF;
+    font-size: 1.2rem;
+}
+.acesso-rapido ul{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-family: var(--font-family-primary);
+    line-height: 170%;
+}
+.acesso-rapido ul a{text-decoration: none; color: white;}
+footer h3{
+    text-align: center; 
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 100;
 
+}
+footer .logo-wpp{
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    left: auto;
+    z-index: 1000;
+}
+footer .logo-wpp img{
+    width: 80px;
+    height: 80px;
+}
