@@ -186,11 +186,16 @@ header {
 }
 #about .texto{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    padding-inline: 20rem;
 }
 #about .texto img{
     width: 700px;
     height: 700px;
+}
+
+.google-avaliacoes{
+    padding-inline: 20rem;
 }
 footer{background-color: black;}
 .footer-elements{
