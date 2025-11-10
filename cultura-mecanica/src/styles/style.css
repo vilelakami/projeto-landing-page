@@ -128,6 +128,16 @@ header {
     margin: auto;
     margin-top: 80px; /* espaçamento da seção de cima */
 }
+.google-avaliacoes img{
+    width: 200px;
+}
+.google-avaliacoes{
+    display: flex;
+    width: 100%;    
+    gap: 0px;
+    border: 1px solid white;
+    
+}
 #servicos .title-section2,
 #avaliacoes .title-section2,
 #about .title-section3,
@@ -387,6 +397,7 @@ footer .logo-wpp img{
 
 .review-carousel {
     max-width: 450px;
+    width: 100%;
     position: relative;
     border: 1px solid white;
 }
@@ -403,7 +414,7 @@ footer .logo-wpp img{
     background-position: center;
     background-repeat: no-repeat;
 }
-.carousel-control-next {
+.carousel-controle-next {
     width: 40px;
     height: 40px;
     right: -15px;
@@ -415,12 +426,12 @@ footer .logo-wpp img{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);  
     font-size: 1.2rem;      
 }
-.carousel-control-next-icon {
+.review-carousel .carousel-control-next-icon {
     background-image: none;
     background-color: #FF8929;
     border-radius: 50%;
 }
-.carousel-control-next-icon::after {
+.review-carousel .carousel-control-next-icon::after {
     content: '>'; /* Usa o símbolo > */
     font-weight: bold;
     display: block;
