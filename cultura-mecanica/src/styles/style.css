@@ -1,7 +1,6 @@
 @import url(global.css);
 
 /* === CABEÇALHO === */
-
 header {
     width: 100%;
     height: 3rem;
@@ -21,12 +20,8 @@ header {
     justify-content: flex-start;
     gap: 15px;
 }
-.info-address span img{
-    width: 25px;
-}
-.social-media a img{
-    width: 30px;
-}
+.info-address span img{width: 25px;}
+.social-media a img{width: 30px;}
 .info-address span {
     color: white;
     width: fit-content;
@@ -51,7 +46,6 @@ header {
     width: 100%;
     height: 2rem;
     display: flex;
-    justify-content: end;
     align-items: center;
     position: relative;
     background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
@@ -73,14 +67,14 @@ header {
 }
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
 #call-to-action > div {
-    background-image: url('../assets/images/icons/hero-headerr.png');
+    background-image: url('../assets/images/icons/v1-gif.gif');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     display: flex;
     position: relative;
     background-color: rgba(0, 0, 0, 0.2);
-    margin-inline: 60px;
+    margin-inline: 60px; /* espaçamento das laterais */
 } 
 #call-to-action div > span{
     display: flex;
@@ -92,13 +86,13 @@ header {
 
 }
 /* textos */
-#call-to-action .title-line1, .title-line3{color: white; line-height: 100%;}
+#call-to-action .title-line1, .title-line3{color: white;}
 #call-to-action .title-line2, .title-line3 .color3{ color: #FF8929;}
 #call-to-action .title-line1{
     font-size: 5.5rem;
     line-height: 60%;
 }
-#call-to-action .title-line2{font-size: 5.8em;}
+#call-to-action .title-line2{font-size: 5.8rem;}
 #call-to-action .title-line3{
     display: flex;
     align-items: center;
@@ -108,89 +102,80 @@ header {
 /* botão */
 #call-to-action div span button{
     background-color: #FF8929;
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 30px;
     padding-inline: 20px;
 }
-
 #call-to-action div span button h3{
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 2.2em;
+    font-size: 2.2rem;
     color: white;
     letter-spacing: 3px;
 }
-
-#call-to-action div span button h3 span{
-    color: black;
-}
+#call-to-action div span button h3 span{color: black;}
 /* seção de serviços e bootstrap */
-#servicos{
+#about,
+#avaliacoes{
     width: 100%;
     height: 100vh;
     margin: auto;
-    /* margin-top: 10rem; */
+    margin-top: 80px; /* espaçamento da seção de cima */
+}
+#serviços{
+    width: 100%;
+    margin: auto;
+    margin-top: 80px; /* espaçamento da seção de cima */
 }
 #servicos .title-section2,
-#avaliacoes .title-section2 {
+#avaliacoes .title-section2,
+#about .title-section3,
+#localizacao .title-section3 { /* titulos juntos (pois são iguais)  */
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     color: #FFF;
     font-family: "Bebas Neue";
 }
-#servicos .title-section2 img {
-    width: 810px;
+#about .title-section3,
+#localizacao .title-section3{/* apenas mudando a cor do about e do localização */
+    color: #FF8929;
 }
+#servicos .title-section2 img {width: 810px;}
 #servicos .title-section2 h1,
 #avaliacoes .title-section2 h1 {
     font-size: 8rem;
     margin-right: 50px;
 }
-
 /* verificar unidades de medidas */
-#about{
-    width: 100%;
-    height: 100vh;
-    margin-top: 10rem;
-}
-#about .title-section3,
-#localizacao .title-section3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color:#FF8929;
-    font-family: "Bebas Neue";
-}
 #about .title-section3 img {
-    width: 41rem;
+    width: 656px;
 }
 #about .title-section3 h1,
 #localizacao .title-section3 h1 {
     font-size: 9.5em;
-    margin-left: 0.2em;
+    margin-left: 32px;
 }
 #about .texto{
     display: flex;
     align-items: center;
-    padding-inline: 20rem;
+    padding-inline: 320px;
 }
 #about .texto img{
     width: 700px;
     height: 700px;
 }
-
+/* seção google */
 .google-avaliacoes{
-    padding-inline: 20rem;
+    padding-inline: 320px;
 }
+/* footer */
 footer{background-color: black;}
 .footer-elements{
     display: flex;
     justify-content: space-evenly;
     padding-top: 20px;
 }
-
 footer .cambio{
     width: 259px;
     height: 300px;
@@ -222,7 +207,6 @@ footer .ecologia{
 .social-media-footer .facebook{gap: 20px;}
 .social-media-footer .instagram a,
 .social-media-footer .facebook a{text-decoration: none; color: white;}
-
 .contato{
     display: flex;
     flex-direction: column;
@@ -253,7 +237,6 @@ footer h3{
     font-size: 1.2rem;
     color: white;
     font-weight: 100;
-
 }
 footer .logo-wpp{
     position: fixed;
@@ -263,8 +246,8 @@ footer .logo-wpp{
     z-index: 1000;
 }
 footer .logo-wpp img{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 @media (max-width: 600px){
     header{
@@ -305,25 +288,30 @@ footer .logo-wpp img{
         letter-spacing: 2px;
     }
     /* serviços */
+    #servicos,
+    #avaliacoes,
+    #localizacao{
+        margin-top: 30px;
+    }
     #servicos .title-section2 img,
-    #avaliacoes .title-section2 img {width: 120px;}
+    #avaliacoes .title-section2 img {width: 150px;}
     #servicos .title-section2 h1,
     #avaliacoes .title-section2 h1 {
-        font-size: 4rem;
-        margin-right: 10px;
+        font-size: 2rem;
+        margin-right: 20px;
     }
-    #avaliacoes .title-section2 h1 {font-size: 3rem;}
-    #about{margin-top: 0; position: relative;}
+    #avaliacoes .title-section2 h1 {font-size: 2rem;}
+    #about{margin-top: 30px; position: relative;}
     #about .title-section3 img,
-    #localizacao .title-section3 img {width: 110px;}
+    #localizacao .title-section3 img {width: 130px;}
     #about .title-section3 h1,
-    #localizacao .title-section3 h1 {font-size: 3rem;}
+    #localizacao .title-section3 h1 {font-size: 2rem; margin-left: 20px;}
     #about .texto{
         flex-direction: column;
         padding-inline: 0rem;
     }
     #about .texto p{
-        font-size: 16px;
+        font-size: 15px;
         text-align: center;
         padding-top: 10px;
     }
@@ -382,7 +370,65 @@ footer .logo-wpp img{
         width: 45px;
         height: 45px;
     }
-    .footer-elements h1{
-        font-size: 20px;
+    .footer-elements h1{font-size: 20px;}
+    .carrossel-tam{
+        max-height: 400px;
+        max-width: 400px;
     }
+    .carousel .carousel-indicators button{
+        width: 8px;
+        height: 8px;
+    }
+    .carousel-control-prev{top: 75px;}
+    .carousel-control-next{
+        top: 43px;
+        left: 200px;
+    }
+    .carousel-caption{bottom: 20px;}
+    .carousel-caption button{padding: 2px;}
+    .carousel-caption button a{font-size: 0.8rem;}
 }
+
+.review-carousel {
+    max-width: 450px;
+    position: relative;
+}
+.carousel-item {
+    height: 250px; /* Altura fixa para todos os cards. Ajuste conforme seus prints! */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+.background-print {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);  
+    font-size: 1.2rem;      
+}
+.carousel-control-next-icon {
+    background-image: none;
+    background-color: #FF8929;
+    border-radius: 50%;
+}
+.carousel-control-next-icon::after {
+    content: '>'; /* Usa o símbolo > */
+    font-weight: bold;
+    display: block;
+    color: white;
+}
+#print-1 { background-image: url('../assets/images/icons/cap1.png'); }
+#print-2 { background-image: url('../assets/images/icons/cap2.png'); }
+#print-3 { background-image: url('../assets/images/icons/cap3.png'); }
