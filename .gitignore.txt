@@ -1,0 +1,12 @@
+# Conteúdo essencial que não é código
+.DS_Store
+Thumbs.db
+
+# Adicione aqui as pastas grandes que não devem ser versionadas
+/backups/
+
+# Se você tem imagens gigantes, ignore-as:
+# *.zip
+# *.mp4
+# *.mov
+# /assets/

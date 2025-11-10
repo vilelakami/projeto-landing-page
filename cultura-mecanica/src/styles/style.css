@@ -165,10 +165,6 @@ header {
     width: 700px;
     height: 700px;
 }
-/* seção google */
-.google-avaliacoes{
-    padding-inline: 320px;
-}
 /* footer */
 footer{background-color: black;}
 .footer-elements{
@@ -392,6 +388,7 @@ footer .logo-wpp img{
 .review-carousel {
     max-width: 450px;
     position: relative;
+    border: 1px solid white;
 }
 .carousel-item {
     height: 250px; /* Altura fixa para todos os cards. Ajuste conforme seus prints! */
