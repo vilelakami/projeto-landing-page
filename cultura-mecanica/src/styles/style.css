@@ -131,12 +131,25 @@ header {
 .google-avaliacoes img{
     width: 200px;
 }
-.google-avaliacoes{
+.google-avaliacoes {
+    /* Manter display: flex para alinhar o Google e o Carrossel lado a lado */
     display: flex;
-    width: 100%;    
-    gap: 0px;
-    border: 1px solid white;
-    
+    width: 100%;
+    /* Ajustei o gap para dar um pequeno espaço entre os dois blocos */
+    gap: 20px;
+    /* Centraliza o conteúdo horizontalmente na seção, se necessário */
+    justify-content: center;
+    /* Alinha os itens ao topo ou no centro, dependendo do que você preferir */
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    border: none; /* Removi a borda de teste */
+    /* Adicione um padding ou margem se precisar de espaço nas laterais da seção */
+    padding-inline: 50px; 
+}
+
+/* Garante que o link do Google tenha seu próprio espaço */
+.google-avaliacoes a {
+    /* Permite que o link não encolha */
+    flex-shrink: 0; 
 }
 #servicos .title-section2,
 #avaliacoes .title-section2,
@@ -396,10 +409,10 @@ footer .logo-wpp img{
 }
 
 .review-carousel {
-    max-width: 450px;
+    max-width: 450px; /* Mantive o max-width, é um bom limite para o card */
     width: 100%;
     position: relative;
-    border: 1px solid white;
+    border: none; /* Removi a borda de teste */
 }
 .carousel-item {
     height: 250px; /* Altura fixa para todos os cards. Ajuste conforme seus prints! */
@@ -415,16 +428,15 @@ footer .logo-wpp img{
     background-repeat: no-repeat;
 }
 .carousel-controle-next {
+    position: absolute; /* Garantir que está absoluto em relação ao pai (#reviewCarousel) */
     width: 40px;
     height: 40px;
-    right: -15px;
+    /* Ajuste o 'right' para posicionar a seta fora do card, se necessário */
+    right: -25px; /* Aumentei um pouco mais para a seta se afastar do card */
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);  
-    font-size: 1.2rem;      
+    /* ... outros estilos ... */
 }
 .review-carousel .carousel-control-next-icon {
     background-image: none;
