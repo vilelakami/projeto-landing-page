@@ -72,8 +72,8 @@ header {
 /* --- Logo --- */
 #call-to-action .logotipo {
     position: absolute;
-    left: 20px;
-    width: 7rem;
+    left: 60px;
+    width: 9rem;
     z-index: 10;
 }
 
@@ -135,16 +135,30 @@ header {
 }
 
 /* botão */
-#call-to-action div span button {
+#call-to-action .button {
     background-color: #FF8929;
     border-radius: 30px;
     padding-inline: 20px;
     width: 630px;
     height: 50px;
     margin: 20px;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 6px 0 #c75a00;
+    transition: all 0.1s ease-in-out;
 }
 
-#call-to-action div span button h3 {
+.button:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 0 #c75a00;
+    transform: translateY(4px);
+    background: #e46b00;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+#call-to-action .button h3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,8 +168,16 @@ header {
     letter-spacing: 3px;
 }
 
-#call-to-action div span button h3 span {
+a {
+    text-decoration: none;
+}
+
+#call-to-action .button h3 span {
     color: black;
+}
+
+#call-to-action .button h3 span:hover {
+    color: #fff;
 }
 
 #about,
@@ -193,7 +215,7 @@ header {
     }
 
     to {
-        transform: translateX(-5000px);
+        transform: translateX(-6000px);
     }
 }
 
