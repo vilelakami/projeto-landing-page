@@ -3,25 +3,30 @@
 /* === CABEÇALHO === */
 header {
     width: 100%;
-    height: 3rem;
+    min-height: 3rem;
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-color-primary);
     font-family: var(--font-family-primary);
     font-weight: var(--text-font-primary-weight);
     font-size: 1rem;
-    border-bottom: 3px solid #FF8929;
     padding-inline: 20px;
 }
-/* --- Grupo de endereço, disponibilidade e redes sociais --- */
+
 .info-address {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 15px;
 }
-.info-address span img{width: 25px;}
-.social-media a img{width: 30px;}
+
+.info-address span img {
+    width: 25px;
+}
+
+.social-media a img {
+    width: 30px;
+}
+
 .info-address span {
     color: white;
     width: fit-content;
@@ -29,11 +34,13 @@ header {
     align-items: center;
     gap: 8px;
 }
+
 .social-media {
     display: flex;
     align-items: center;
     gap: 5px;
 }
+
 /* --- Barra de navegação superior --- */
 #call-to-action {
     width: 100%;
@@ -42,14 +49,18 @@ header {
     flex-direction: column;
     padding-top: 30px;
 }
-#call-to-action nav{
+
+#call-to-action nav {
     width: 100%;
     height: 2rem;
     display: flex;
+    justify-content: center;
+    gap: 200px;
     align-items: center;
     position: relative;
     background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
 }
+
 #call-to-action nav a {
     font-family: var(--font-family-secondary);
     font-weight: var(--text-font-primary-weight);
@@ -57,80 +68,144 @@ header {
     color: white;
     text-decoration: none;
 }
+
 /* --- Logo --- */
 #call-to-action .logotipo {
     position: absolute;
     left: 20px;
-    bottom: 25px;
     width: 7rem;
     z-index: 10;
 }
+
 /* CALL TO ACTION, HERO-HEADER E BOTÃO */
-#call-to-action > div {
+#call-to-action>div {
     background-image: url('../assets/images/icons/v1-gif.gif');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
     background-color: rgba(0, 0, 0, 0.2);
-    margin-inline: 60px; /* espaçamento das laterais */
-} 
-#call-to-action div > span{
+    /* espaçamento das laterais */
+}
+
+.bg-cta {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-image: url(../assets/images/shadow-cta.png);
+}
+
+#call-to-action div>span {
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-family: var(--font-family-title);  
-    margin-right: 20px;
+    font-family: var(--font-family-title);
 
 }
+
 /* textos */
-#call-to-action .title-line1, .title-line3{color: white;}
-#call-to-action .title-line2, .title-line3 .color3{ color: #FF8929;}
-#call-to-action .title-line1{
+#call-to-action .title-line1,
+.title-line3 {
+    color: white;
+}
+
+#call-to-action .title-line2,
+.title-line3 .color3 {
+    color: #FF8929;
+}
+
+#call-to-action .title-line1 {
     font-size: 5.5rem;
     line-height: 60%;
 }
-#call-to-action .title-line2{font-size: 5.8rem;}
-#call-to-action .title-line3{
+
+#call-to-action .title-line2 {
+    font-size: 5.8rem;
+}
+
+#call-to-action .title-line3 {
     display: flex;
     align-items: center;
-    font-size: 6em;
+    font-size: 7rem;
     gap: 30px;
 }
+
 /* botão */
-#call-to-action div span button{
+#call-to-action div span button {
     background-color: #FF8929;
-    border: 3px solid black;
     border-radius: 30px;
     padding-inline: 20px;
+    width: 630px;
+    height: 50px;
+    margin: 20px;
 }
-#call-to-action div span button h3{
+
+#call-to-action div span button h3 {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    font-size: 2.2rem;
+    font-size: 2.7rem;
     color: white;
     letter-spacing: 3px;
 }
-#call-to-action div span button h3 span{color: black;}
+
+#call-to-action div span button h3 span {
+    color: black;
+}
+
 /* seção de serviços e bootstrap */
 #about,
-#avaliacoes{
+#avaliacoes {
     width: 100%;
     height: 100vh;
     margin: auto;
-    margin-top: 80px; /* espaçamento da seção de cima */
+    margin-top: 80px;
+    /* espaçamento da seção de cima */
 }
-#serviços{
+
+#serviços {
     width: 100%;
     margin: auto;
-    margin-top: 80px; /* espaçamento da seção de cima */
+    margin-top: 80px;
+    /* espaçamento da seção de cima */
 }
-.google-avaliacoes img{
+
+.brands-list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.icons-wrapper {
+    display: flex;
+    gap: 100px;
+    animation: scroll-loop 13s linear infinite;
+}
+
+.icons-wrapper img {
+    width: 120px;
+    height: 120px;
+}
+
+@keyframes scroll-loop {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-5000px);
+    }
+}
+
+.google-avaliacoes img {
     width: 200px;
 }
+
 .google-avaliacoes {
     /* Manter display: flex para alinhar o Google e o Carrossel lado a lado */
     display: flex;
@@ -140,70 +215,118 @@ header {
     /* Centraliza o conteúdo horizontalmente na seção, se necessário */
     justify-content: center;
     /* Alinha os itens ao topo ou no centro, dependendo do que você preferir */
-    align-items: flex-start; /* Alinha os itens pelo topo */
-    border: none; /* Removi a borda de teste */
+    align-items: flex-start;
+    /* Alinha os itens pelo topo */
+    border: none;
+    /* Removi a borda de teste */
     /* Adicione um padding ou margem se precisar de espaço nas laterais da seção */
-    padding-inline: 50px; 
+    padding-inline: 50px;
 }
 
 /* Garante que o link do Google tenha seu próprio espaço */
 .google-avaliacoes a {
     /* Permite que o link não encolha */
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
+
 #servicos .title-section2,
 #avaliacoes .title-section2,
 #about .title-section3,
-#localizacao .title-section3 { /* titulos juntos (pois são iguais)  */
+#localizacao .title-section3 {
+    /* titulos juntos (pois são iguais)  */
     display: flex;
+    justify-content: flex-end;
+    gap: 70px;
     align-items: center;
     color: #FFF;
     font-family: "Bebas Neue";
 }
+
 #about .title-section3,
-#localizacao .title-section3{/* apenas mudando a cor do about e do localização */
+#localizacao .title-section3 {
+    /* apenas mudando a cor do about e do localização */
     color: #FF8929;
+    display: flex;
+    justify-content: flex-start;
+    gap: 70px;
 }
-#servicos .title-section2 img {width: 810px;}
+
+#servicos .title-section2 img {
+    width: 810px;
+    transform-origin: right;
+    transform: scaleX(1.5);
+
+}
+
 #servicos .title-section2 h1,
 #avaliacoes .title-section2 h1 {
     font-size: 8rem;
     margin-right: 50px;
 }
+
+#avaliacoes .title-section2 img {
+    width: 710px;
+    transform-origin: right;
+    transform: scaleX(1.5);
+}
+
 /* verificar unidades de medidas */
 #about .title-section3 img {
-    width: 656px;
+    width: 700px;
+    transform-origin: left;
+    transform: scaleX(1.5);
 }
+
 #about .title-section3 h1,
 #localizacao .title-section3 h1 {
-    font-size: 9.5em;
+    font-size: 8em;
     margin-left: 32px;
 }
-#about .texto{
+
+#about .texto-e-imagem {
     display: flex;
     align-items: center;
-    padding-inline: 320px;
+    justify-content: center;
+    gap: 40px;
+    flex: 0 0 40%;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
 }
-#about .texto img{
+
+#about .texto-e-imagem img {
+    width: 400px;
+    flex: 0 0 60%;
+}
+
+#about .texto img {
     width: 700px;
     height: 700px;
 }
+
 /* footer */
-footer{background-color: black;}
-.footer-elements{
+footer {
+    background-color: black;
+}
+
+.footer-elements {
     display: flex;
     justify-content: space-evenly;
     padding-top: 20px;
 }
-footer .cambio{
+
+footer .cambio {
     width: 259px;
     height: 300px;
 }
-footer .ecologia{
+
+footer .ecologia {
     width: 254px;
     height: 254px;
 }
-.social-media-footer{
+
+.social-media-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,22 +334,32 @@ footer .ecologia{
     font-family: var(--font-family-primary);
     color: white;
 }
-.facebook > img{
+
+.facebook>img {
     width: 38px;
     height: 35px;
 }
+
 .social-media-footer .instagram,
-.social-media-footer .facebook{
+.social-media-footer .facebook {
     display: flex;
     align-items: center;
     gap: 10px;
     font-family: var(--font-family-primary);
-    font-size: 1.2rem;    
+    font-size: 1.2rem;
 }
-.social-media-footer .facebook{gap: 20px;}
+
+.social-media-footer .facebook {
+    gap: 20px;
+}
+
 .social-media-footer .instagram a,
-.social-media-footer .facebook a{text-decoration: none; color: white;}
-.contato{
+.social-media-footer .facebook a {
+    text-decoration: none;
+    color: white;
+}
+
+.contato {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,191 +368,312 @@ footer .ecologia{
     color: white;
     font-size: 1.2rem;
 }
-.acesso-rapido{
+
+.acesso-rapido {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-primary);
     color: #FFF;
     font-size: 1.2rem;
 }
-.acesso-rapido ul{
+
+.acesso-rapido ul {
     display: flex;
     flex-direction: column;
     align-items: end;
     font-family: var(--font-family-primary);
     line-height: 170%;
 }
-.acesso-rapido ul a{text-decoration: none; color: white;}
-footer h3{
-    text-align: center; 
+
+.acesso-rapido ul a {
+    text-decoration: none;
+    color: white;
+}
+
+footer h3 {
+    text-align: center;
     font-family: var(--font-family-primary);
     font-size: 1.2rem;
     color: white;
     font-weight: 100;
 }
-footer .logo-wpp{
+
+footer .logo-wpp {
     position: fixed;
     bottom: 5px;
     right: 20px;
     left: auto;
     z-index: 1000;
 }
-footer .logo-wpp img{
-    width: 50px;
-    height: 50px;
+
+footer .logo-wpp img {
+    height: 70px;
 }
-@media (max-width: 600px){
-    header{
+
+@media (max-width: 600px) {
+    header {
         flex-wrap: wrap;
         height: 3rem;
         padding-top: 5px;
     }
-    .info-address {font-size: 7px;}
-    .info-address span img{width: 15px;}
-    .social-media a img{width: 0px;}
-    .info-address span {gap: 5px;}
-    #call-to-action{margin-inline: 0px;}
-    #call-to-action nav a {font-size: 10px;}
+
+    .info-address {
+        font-size: 7px;
+    }
+
+    .info-address span img {
+        width: 15px;
+    }
+
+    .social-media a img {
+        width: 0px;
+    }
+
+    .info-address span {
+        gap: 5px;
+    }
+
+    #call-to-action {
+        margin-inline: 0px;
+    }
+
+    #call-to-action nav a {
+        font-size: 10px;
+    }
+
     #call-to-action .logotipo {
         left: 125px;
         bottom: 35px;
         width: 4rem;
     }
-    #call-to-action > div {margin-inline: 0px;} 
-    #call-to-action div > span{margin: auto;}
-    #call-to-action .title-line1{
+
+    #call-to-action>div {
+        margin-inline: 0px;
+    }
+
+    #call-to-action div>span {
+        margin: auto;
+    }
+
+    #call-to-action .title-line1 {
         font-size: 2rem;
         line-height: 60%;
     }
-    #call-to-action .title-line2{font-size: 2em;}
-    #call-to-action .title-line3{
+
+    #call-to-action .title-line2 {
+        font-size: 2em;
+    }
+
+    #call-to-action .title-line3 {
         font-size: 2.5em;
         gap: 10px;
     }
+
     /* botão */
-    #call-to-action div span button{
+    #call-to-action div span button {
         padding-inline: 8px;
         border: 2px solid black;
     }
-    #call-to-action div span button h3{
+
+    #call-to-action div span button h3 {
         gap: 5px;
         font-size: 15px;
         letter-spacing: 2px;
     }
+
     /* serviços */
     #servicos,
     #avaliacoes,
-    #localizacao{
+    #localizacao {
         margin-top: 30px;
     }
+
     #servicos .title-section2 img,
-    #avaliacoes .title-section2 img {width: 150px;}
+    #avaliacoes .title-section2 img {
+        width: 150px;
+    }
+
     #servicos .title-section2 h1,
     #avaliacoes .title-section2 h1 {
         font-size: 2rem;
         margin-right: 20px;
     }
-    #avaliacoes .title-section2 h1 {font-size: 2rem;}
-    #about{margin-top: 30px; position: relative;}
+
+    #avaliacoes .title-section2 h1 {
+        font-size: 2rem;
+    }
+
+    #about {
+        margin-top: 30px;
+        position: relative;
+    }
+
     #about .title-section3 img,
-    #localizacao .title-section3 img {width: 130px;}
+    #localizacao .title-section3 img {
+        width: 130px;
+    }
+
     #about .title-section3 h1,
-    #localizacao .title-section3 h1 {font-size: 2rem; margin-left: 20px;}
-    #about .texto{
+    #localizacao .title-section3 h1 {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+
+    #about .texto {
         flex-direction: column;
         padding-inline: 0rem;
     }
-    #about .texto p{
+
+    #about .texto p {
         font-size: 15px;
         text-align: center;
         padding-top: 10px;
     }
-    #about .texto img{
+
+    #about .texto img {
         width: 120px;
         height: 200px;
         position: absolute;
         bottom: 0;
         right: 0;
     }
-    .carrossel-tam{margin-top: 10px;}
-    .carousel-caption{bottom: 20px;}
-    .carousel-caption button{
+
+    .carrossel-tam {
+        margin-top: 10px;
+    }
+
+    .carousel-caption {
+        bottom: 20px;
+    }
+
+    .carousel-caption button {
         padding-inline: 10px;
         padding-block: 2px;
     }
-    .carousel-caption button a{
+
+    .carousel-caption button a {
         font-size: 12px;
     }
-    .google-avaliacoes{
+
+    .google-avaliacoes {
         padding-inline: 0rem;
         display: flex;
         flex-direction: column;
     }
-    .google-avaliacoes img{
+
+    .google-avaliacoes img {
         width: 200px;
     }
-    #localizacao .mapa{
+
+    #localizacao .mapa {
         height: 200px;
         padding-top: 20px;
     }
-    .footer-elements{flex-direction: column; gap: 20px;}
-    footer .cambio{
+
+    .footer-elements {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .cambio {
         width: 150px;
         height: 200px;
     }
-    footer .ecologia{
+
+    footer .ecologia {
         width: 150px;
         height: 150px;
     }
+
     footer .logo-insta,
-    .facebook > img{
+    .facebook>img {
         width: 25px;
         height: 25px;
     }
+
     .social-media-footer .instagram,
-    .social-media-footer .facebook{
+    .social-media-footer .facebook {
         font-size: 16px;
         gap: 15px;
     }
-    .social-media-footer .facebook{gap: 25px;}
-    .contato{gap: 10px; font-size: 16px;}
-    .acesso-rapido ul{align-items: center; padding: 0; font-size: 16px;}
-    footer h3{font-size: 10px;}
-    footer .logo-wpp img{
+
+    .social-media-footer .facebook {
+        gap: 25px;
+    }
+
+    .contato {
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .acesso-rapido ul {
+        align-items: center;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    footer h3 {
+        font-size: 10px;
+    }
+
+    footer .logo-wpp img {
         width: 45px;
         height: 45px;
     }
-    .footer-elements h1{font-size: 20px;}
-    .carrossel-tam{
+
+    .footer-elements h1 {
+        font-size: 20px;
+    }
+
+    .carrossel-tam {
         max-height: 400px;
         max-width: 400px;
     }
-    .carousel .carousel-indicators button{
+
+    .carousel .carousel-indicators button {
         width: 8px;
         height: 8px;
     }
-    .carousel-control-prev{top: 75px;}
-    .carousel-control-next{
+
+    .carousel-control-prev {
+        top: 75px;
+    }
+
+    .carousel-control-next {
         top: 43px;
         left: 200px;
     }
-    .carousel-caption{bottom: 20px;}
-    .carousel-caption button{padding: 2px;}
-    .carousel-caption button a{font-size: 0.8rem;}
+
+    .carousel-caption {
+        bottom: 20px;
+    }
+
+    .carousel-caption button {
+        padding: 2px;
+    }
+
+    .carousel-caption button a {
+        font-size: 0.8rem;
+    }
 }
 
 .review-carousel {
-    max-width: 450px; /* Mantive o max-width, é um bom limite para o card */
+    max-width: 450px;
+    /* Mantive o max-width, é um bom limite para o card */
     width: 100%;
     position: relative;
-    border: none; /* Removi a borda de teste */
+    border: none;
+    /* Removi a borda de teste */
 }
+
 .carousel-item {
-    height: 250px; /* Altura fixa para todos os cards. Ajuste conforme seus prints! */
+    height: 250px;
+    /* Altura fixa para todos os cards. Ajuste conforme seus prints! */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+}
+
 .background-print {
     width: 100%;
     height: 100%;
@@ -427,28 +681,43 @@ footer .logo-wpp img{
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .carousel-controle-next {
-    position: absolute; /* Garantir que está absoluto em relação ao pai (#reviewCarousel) */
+    position: absolute;
+    /* Garantir que está absoluto em relação ao pai (#reviewCarousel) */
     width: 40px;
     height: 40px;
     /* Ajuste o 'right' para posicionar a seta fora do card, se necessário */
-    right: -25px; /* Aumentei um pouco mais para a seta se afastar do card */
+    right: -25px;
+    /* Aumentei um pouco mais para a seta se afastar do card */
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
     /* ... outros estilos ... */
 }
+
 .review-carousel .carousel-control-next-icon {
     background-image: none;
     background-color: #FF8929;
     border-radius: 50%;
 }
+
 .review-carousel .carousel-control-next-icon::after {
-    content: '>'; /* Usa o símbolo > */
+    content: '>';
+    /* Usa o símbolo > */
     font-weight: bold;
     display: block;
     color: white;
 }
-#print-1 { background-image: url('../assets/images/icons/cap1.png'); }
-#print-2 { background-image: url('../assets/images/icons/cap2.png'); }
-#print-3 { background-image: url('../assets/images/icons/cap3.png'); }
+
+#print-1 {
+    background-image: url('../assets/images/icons/cap1.png');
+}
+
+#print-2 {
+    background-image: url('../assets/images/icons/cap2.png');
+}
+
+#print-3 {
+    background-image: url('../assets/images/icons/cap3.png');
+}
