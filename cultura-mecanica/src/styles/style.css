@@ -52,7 +52,7 @@ header {
 
 #call-to-action nav {
     width: 100%;
-    height: 2rem;
+    min-height: 3rem;
     display: flex;
     justify-content: center;
     gap: 200px;
@@ -158,21 +158,16 @@ header {
     color: black;
 }
 
-/* seção de serviços e bootstrap */
 #about,
 #avaliacoes {
     width: 100%;
-    height: 100vh;
     margin: auto;
-    margin-top: 80px;
-    /* espaçamento da seção de cima */
 }
 
 #serviços {
     width: 100%;
     margin: auto;
     margin-top: 80px;
-    /* espaçamento da seção de cima */
 }
 
 .brands-list {
@@ -240,6 +235,7 @@ header {
     align-items: center;
     color: #FFF;
     font-family: "Bebas Neue";
+    height: 250px;
 }
 
 #about .title-section3,
@@ -249,6 +245,11 @@ header {
     display: flex;
     justify-content: flex-start;
     gap: 70px;
+}
+
+#localizacao .title-section3 img {
+    transform-origin: left;
+    transform: scaleX(1.5);
 }
 
 #servicos .title-section2 img {
@@ -268,6 +269,52 @@ header {
     width: 710px;
     transform-origin: right;
     transform: scaleX(1.5);
+}
+
+/* carrossel */
+.review-carousel {
+    position: relative;
+    padding-block: 10px;
+}
+
+/* trilho com todos os cards */
+.review-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.45s ease;
+    height: 450px;
+    margin-top: 50px;
+}
+
+/* cada card ocupa 1/3 da largura visível */
+.review-card {
+    flex: 0 0 calc(33.333% - 13.5px);
+    /* 3 por vez */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: #fff;
+}
+
+.review-card img {
+    width: 100%;
+    display: block;
+}
+
+/* botão de avançar (seta laranja à direita) */
+.review-next {
+    margin: 30px;
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 /* verificar unidades de medidas */
@@ -513,6 +560,53 @@ footer .logo-wpp img {
         width: 130px;
     }
 
+    .review-carousel {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        padding-block: 20px;
+    }
+
+    .review-track {
+        display: flex;
+        gap: 20px;
+        transition: transform .45s ease;
+    }
+
+    .review-item {
+        flex: 0 0 calc(33.33% - 20px);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+        background: #fff;
+    }
+
+    .review-item img {
+        width: 100%;
+        display: block;
+    }
+
+    .review-next {
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #FF8929;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #about .title-section3 h1,
     #localizacao .title-section3 h1 {
         font-size: 2rem;
@@ -536,33 +630,6 @@ footer .logo-wpp img {
         position: absolute;
         bottom: 0;
         right: 0;
-    }
-
-    .carrossel-tam {
-        margin-top: 10px;
-    }
-
-    .carousel-caption {
-        bottom: 20px;
-    }
-
-    .carousel-caption button {
-        padding-inline: 10px;
-        padding-block: 2px;
-    }
-
-    .carousel-caption button a {
-        font-size: 12px;
-    }
-
-    .google-avaliacoes {
-        padding-inline: 0rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .google-avaliacoes img {
-        width: 200px;
     }
 
     #localizacao .mapa {
@@ -624,100 +691,4 @@ footer .logo-wpp img {
     .footer-elements h1 {
         font-size: 20px;
     }
-
-    .carrossel-tam {
-        max-height: 400px;
-        max-width: 400px;
-    }
-
-    .carousel .carousel-indicators button {
-        width: 8px;
-        height: 8px;
-    }
-
-    .carousel-control-prev {
-        top: 75px;
-    }
-
-    .carousel-control-next {
-        top: 43px;
-        left: 200px;
-    }
-
-    .carousel-caption {
-        bottom: 20px;
-    }
-
-    .carousel-caption button {
-        padding: 2px;
-    }
-
-    .carousel-caption button a {
-        font-size: 0.8rem;
-    }
-}
-
-.review-carousel {
-    max-width: 450px;
-    /* Mantive o max-width, é um bom limite para o card */
-    width: 100%;
-    position: relative;
-    border: none;
-    /* Removi a borda de teste */
-}
-
-.carousel-item {
-    height: 250px;
-    /* Altura fixa para todos os cards. Ajuste conforme seus prints! */
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.background-print {
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.carousel-controle-next {
-    position: absolute;
-    /* Garantir que está absoluto em relação ao pai (#reviewCarousel) */
-    width: 40px;
-    height: 40px;
-    /* Ajuste o 'right' para posicionar a seta fora do card, se necessário */
-    right: -25px;
-    /* Aumentei um pouco mais para a seta se afastar do card */
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    /* ... outros estilos ... */
-}
-
-.review-carousel .carousel-control-next-icon {
-    background-image: none;
-    background-color: #FF8929;
-    border-radius: 50%;
-}
-
-.review-carousel .carousel-control-next-icon::after {
-    content: '>';
-    /* Usa o símbolo > */
-    font-weight: bold;
-    display: block;
-    color: white;
-}
-
-#print-1 {
-    background-image: url('../assets/images/icons/cap1.png');
-}
-
-#print-2 {
-    background-image: url('../assets/images/icons/cap2.png');
-}
-
-#print-3 {
-    background-image: url('../assets/images/icons/cap3.png');
 }
