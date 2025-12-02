@@ -1,0 +1,716 @@
+@import url(global.css);
+
+/* === CABEÇALHO === */
+header {
+    width: 100%;
+    min-height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color-primary);
+    font-family: var(--font-family-primary);
+    font-weight: var(--text-font-primary-weight);
+    font-size: 1rem;
+    padding-inline: 20px;
+}
+
+.info-address {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-address span img {
+    width: 25px;
+}
+
+.social-media a img {
+    width: 30px;
+}
+
+.info-address span {
+    color: white;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* --- Barra de navegação superior --- */
+#call-to-action {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+#call-to-action nav {
+    width: 100%;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(90deg, #FF8929 0%, #B15C17 98%);
+}
+
+#call-to-action nav a {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--text-font-primary-weight);
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- Logo --- */
+#call-to-action .logotipo {
+    position: absolute;
+    left: 60px;
+    width: 9rem;
+    z-index: 10;
+}
+
+/* CALL TO ACTION, HERO-HEADER E BOTÃO */
+#call-to-action>div {
+    background-image: url('../assets/images/icons/v1-gif.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* espaçamento das laterais */
+}
+
+.bg-cta {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-image: url(../assets/images/shadow-cta.png);
+}
+
+#call-to-action div>span {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--font-family-title);
+
+}
+
+/* textos */
+#call-to-action .title-line1,
+.title-line3 {
+    color: white;
+}
+
+#call-to-action .title-line2,
+.title-line3 .color3 {
+    color: #FF8929;
+}
+
+#call-to-action .title-line1 {
+    font-size: 5.5rem;
+    line-height: 60%;
+}
+
+#call-to-action .title-line2 {
+    font-size: 5.8rem;
+}
+
+#call-to-action .title-line3 {
+    display: flex;
+    align-items: center;
+    font-size: 7rem;
+    gap: 30px;
+}
+
+/* botão */
+#call-to-action .button {
+    background-color: #FF8929;
+    border-radius: 30px;
+    padding-inline: 20px;
+    width: 630px;
+    height: 50px;
+    margin: 20px;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 6px 0 #c75a00;
+    transition: all 0.1s ease-in-out;
+}
+
+.button:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 0 #c75a00;
+    transform: translateY(4px);
+    background: #e46b00;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+#call-to-action .button h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2.7rem;
+    color: white;
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#call-to-action .button h3 span {
+    color: black;
+}
+
+#call-to-action .button h3 span:hover {
+    color: #fff;
+}
+
+#about,
+#avaliacoes {
+    width: 100%;
+    margin: auto;
+}
+
+#serviços {
+    width: 100%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.brands-list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.icons-wrapper {
+    display: flex;
+    gap: 100px;
+    animation: scroll-loop 13s linear infinite;
+}
+
+.icons-wrapper img {
+    width: 120px;
+    height: 120px;
+}
+
+@keyframes scroll-loop {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-6000px);
+    }
+}
+
+.google-avaliacoes img {
+    width: 200px;
+}
+
+.google-avaliacoes {
+    /* Manter display: flex para alinhar o Google e o Carrossel lado a lado */
+    display: flex;
+    width: 100%;
+    /* Ajustei o gap para dar um pequeno espaço entre os dois blocos */
+    gap: 20px;
+    /* Centraliza o conteúdo horizontalmente na seção, se necessário */
+    justify-content: center;
+    /* Alinha os itens ao topo ou no centro, dependendo do que você preferir */
+    align-items: flex-start;
+    /* Alinha os itens pelo topo */
+    border: none;
+    /* Removi a borda de teste */
+    /* Adicione um padding ou margem se precisar de espaço nas laterais da seção */
+    padding-inline: 50px;
+}
+
+/* Garante que o link do Google tenha seu próprio espaço */
+.google-avaliacoes a {
+    /* Permite que o link não encolha */
+    flex-shrink: 0;
+}
+
+#servicos .title-section2,
+#avaliacoes .title-section2,
+#about .title-section3,
+#localizacao .title-section3 {
+    /* titulos juntos (pois são iguais)  */
+    display: flex;
+    justify-content: flex-end;
+    gap: 70px;
+    align-items: center;
+    color: #FFF;
+    font-family: "Bebas Neue";
+    height: 250px;
+}
+
+#about .title-section3,
+#localizacao .title-section3 {
+    /* apenas mudando a cor do about e do localização */
+    color: #FF8929;
+    display: flex;
+    justify-content: flex-start;
+    gap: 70px;
+}
+
+#localizacao .title-section3 img {
+    transform-origin: left;
+    transform: scaleX(1.5);
+}
+
+#servicos .title-section2 img {
+    width: 810px;
+    transform-origin: right;
+    transform: scaleX(1.5);
+
+}
+
+#servicos .title-section2 h1,
+#avaliacoes .title-section2 h1 {
+    font-size: 8rem;
+    margin-right: 50px;
+}
+
+#avaliacoes .title-section2 img {
+    width: 710px;
+    transform-origin: right;
+    transform: scaleX(1.5);
+}
+
+/* carrossel */
+.review-carousel {
+    position: relative;
+    padding-block: 10px;
+}
+
+/* trilho com todos os cards */
+.review-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.45s ease;
+    height: 450px;
+    margin-top: 50px;
+}
+
+/* cada card ocupa 1/3 da largura visível */
+.review-card {
+    flex: 0 0 calc(33.333% - 13.5px);
+    /* 3 por vez */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: #fff;
+}
+
+.review-card img {
+    width: 100%;
+    display: block;
+}
+
+/* botão de avançar (seta laranja à direita) */
+.review-next {
+    margin: 30px;
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* verificar unidades de medidas */
+#about .title-section3 img {
+    width: 700px;
+    transform-origin: left;
+    transform: scaleX(1.5);
+}
+
+#about .title-section3 h1,
+#localizacao .title-section3 h1 {
+    font-size: 8em;
+    margin-left: 32px;
+}
+
+#about .texto-e-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex: 0 0 40%;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#about .texto-e-imagem img {
+    width: 400px;
+    flex: 0 0 60%;
+}
+
+#about .texto img {
+    width: 700px;
+    height: 700px;
+}
+
+/* footer */
+footer {
+    background-color: black;
+}
+
+.footer-elements {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+footer .cambio {
+    width: 259px;
+    height: 300px;
+}
+
+footer .ecologia {
+    width: 254px;
+    height: 254px;
+}
+
+.social-media-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family-primary);
+    color: white;
+}
+
+.facebook>img {
+    width: 38px;
+    height: 35px;
+}
+
+.social-media-footer .instagram,
+.social-media-footer .facebook {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+}
+
+.social-media-footer .facebook {
+    gap: 20px;
+}
+
+.social-media-footer .instagram a,
+.social-media-footer .facebook a {
+    text-decoration: none;
+    color: white;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-family-primary);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.acesso-rapido {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-primary);
+    color: #FFF;
+    font-size: 1.2rem;
+}
+
+.acesso-rapido ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-family: var(--font-family-primary);
+    line-height: 170%;
+}
+
+.acesso-rapido ul a {
+    text-decoration: none;
+    color: white;
+}
+
+footer h3 {
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 100;
+}
+
+footer .logo-wpp {
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    left: auto;
+    z-index: 1000;
+}
+
+footer .logo-wpp img {
+    height: 70px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        height: 3rem;
+        padding-top: 5px;
+    }
+
+    .info-address {
+        font-size: 7px;
+    }
+
+    .info-address span img {
+        width: 15px;
+    }
+
+    .social-media a img {
+        width: 0px;
+    }
+
+    .info-address span {
+        gap: 5px;
+    }
+
+    #call-to-action {
+        margin-inline: 0px;
+    }
+
+    #call-to-action nav a {
+        font-size: 10px;
+    }
+
+    #call-to-action .logotipo {
+        left: 125px;
+        bottom: 35px;
+        width: 4rem;
+    }
+
+    #call-to-action>div {
+        margin-inline: 0px;
+    }
+
+    #call-to-action div>span {
+        margin: auto;
+    }
+
+    #call-to-action .title-line1 {
+        font-size: 2rem;
+        line-height: 60%;
+    }
+
+    #call-to-action .title-line2 {
+        font-size: 2em;
+    }
+
+    #call-to-action .title-line3 {
+        font-size: 2.5em;
+        gap: 10px;
+    }
+
+    /* botão */
+    #call-to-action div span button {
+        padding-inline: 8px;
+        border: 2px solid black;
+    }
+
+    #call-to-action div span button h3 {
+        gap: 5px;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    /* serviços */
+    #servicos,
+    #avaliacoes,
+    #localizacao {
+        margin-top: 30px;
+    }
+
+    #servicos .title-section2 img,
+    #avaliacoes .title-section2 img {
+        width: 150px;
+    }
+
+    #servicos .title-section2 h1,
+    #avaliacoes .title-section2 h1 {
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+
+    #avaliacoes .title-section2 h1 {
+        font-size: 2rem;
+    }
+
+    #about {
+        margin-top: 30px;
+        position: relative;
+    }
+
+    #about .title-section3 img,
+    #localizacao .title-section3 img {
+        width: 130px;
+    }
+
+    .review-carousel {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        padding-block: 20px;
+    }
+
+    .review-track {
+        display: flex;
+        gap: 20px;
+        transition: transform .45s ease;
+    }
+
+    .review-item {
+        flex: 0 0 calc(33.33% - 20px);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+        background: #fff;
+    }
+
+    .review-item img {
+        width: 100%;
+        display: block;
+    }
+
+    .review-next {
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #FF8929;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about .title-section3 h1,
+    #localizacao .title-section3 h1 {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+
+    #about .texto {
+        flex-direction: column;
+        padding-inline: 0rem;
+    }
+
+    #about .texto p {
+        font-size: 15px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    #about .texto img {
+        width: 120px;
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    #localizacao .mapa {
+        height: 200px;
+        padding-top: 20px;
+    }
+
+    .footer-elements {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .cambio {
+        width: 150px;
+        height: 200px;
+    }
+
+    footer .ecologia {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer .logo-insta,
+    .facebook>img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .social-media-footer .instagram,
+    .social-media-footer .facebook {
+        font-size: 16px;
+        gap: 15px;
+    }
+
+    .social-media-footer .facebook {
+        gap: 25px;
+    }
+
+    .contato {
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .acesso-rapido ul {
+        align-items: center;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    footer h3 {
+        font-size: 10px;
+    }
+
+    footer .logo-wpp img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-elements h1 {
+        font-size: 20px;
+    }
+}
