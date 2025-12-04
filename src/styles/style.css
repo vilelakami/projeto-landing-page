@@ -1,4 +1,44 @@
-@import url(global.css);
+/* =========================================
+   1. CSS GLOBAL (Mesclado)
+   ========================================= */
+*, html {
+    padding: 0;
+    margin: 0; /* Adicionado reset de margem padrão */
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color-primary: #000000;
+    --txt-color-primary: #ffffff;
+    --font-family-primary: 'Inter', sans-serif;
+    --text-font-primary-weight: 700;
+    --font-family-secondary: 'Montserrat', sans-serif;
+    --font-family-title: 'Bebas Neue', sans-serif;
+    --font-title-weight: 400;
+}
+
+body {
+    background-image: url(../assets/images/Background.png);
+    background-color: #424242; /* Fallback caso a imagem falhe */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+/* =========================================
+   2. ESTILOS DA LANDING PAGE
+   ========================================= */
 
 /* === CABEÇALHO === */
 header {
@@ -88,13 +128,15 @@ header {
     align-items: center;
     position: relative;
     background-color: rgba(0, 0, 0, 0.2);
-    /* espaçamento das laterais */
 }
 
 .bg-cta {
     display: flex;
     justify-content: center;
     height: 100%;
+    background-repeat: no-repeat; 
+    background-size: cover;       
+    background-position: center; 
     background-image: url(../assets/images/shadow-cta.png);
 }
 
@@ -104,7 +146,7 @@ header {
     flex-direction: column;
     text-align: center;
     font-family: var(--font-family-title);
-
+    padding-top: 50px; /* Ajuda a centralizar visualmente */
 }
 
 /* textos */
@@ -118,13 +160,19 @@ header {
     color: #FF8929;
 }
 
+/* CORREÇÃO DO PROBLEMA DA LINHA */
 #call-to-action .title-line1 {
     font-size: 5.5rem;
-    line-height: 60%;
+    /* Alterado de 60% para 90% para evitar artefatos visuais */
+    line-height: 90%; 
+    /* Adicionada margem negativa para manter o visual 'juntinho' */
+    margin-bottom: -10px; 
 }
 
 #call-to-action .title-line2 {
     font-size: 5.8rem;
+    /* Ajuste fino para garantir consistência */
+    line-height: 100%;
 }
 
 #call-to-action .title-line3 {
@@ -132,6 +180,7 @@ header {
     align-items: center;
     font-size: 7rem;
     gap: 30px;
+    line-height: 100%;
 }
 
 /* botão */
@@ -167,6 +216,8 @@ header {
     font-size: 2.7rem;
     color: white;
     letter-spacing: 3px;
+    /* Importante para centralizar texto no botão */
+    line-height: 50px; 
 }
 
 a {
@@ -181,28 +232,153 @@ a {
     color: #fff;
 }
 
-#about,
+/* =========================================
+   SEÇÃO QUEM SOMOS (RENOVADA)
+   ========================================= */
+
+#about {
+    width: 100%;
+    position: relative;
+    padding-bottom: 80px; /* Espaço em baixo para não colar na próxima seção */
+}
+
+/* Container flexível */
+.about-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente texto e imagem */
+    justify-content: space-between;
+    gap: 60px; /* Espaço generoso entre texto e foto */
+}
+
+/* --- COLUNA DE TEXTO --- */
+.about-text {
+    flex: 1; /* Ocupa o espaço disponível */
+    color: #e0e0e0; /* Cinza claro para melhor leitura no fundo escuro */
+    font-family: var(--font-family-primary);
+    text-align: left; /* Alinhado à esquerda fica mais moderno que justificado */
+}
+
+.about-text h3 {
+    color: #FF8929; /* Laranja da marca */
+    font-size: 2rem;
+    font-family: var(--font-family-secondary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8; /* Aumenta o espaço entre linhas para facilitar leitura */
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.about-text strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* --- LISTA DE DESTAQUES (NOVO) --- */
+.about-highlights {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+.about-highlights li {
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.about-highlights li span {
+    color: #FF8929;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* --- COLUNA DA IMAGEM --- */
+.about-image {
+    flex: 1;
+    position: relative; /* Necessário para o efeito de decoração */
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho para não ficar gigante */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 2; /* Fica na frente da decoração */
+    position: relative;
+    
+    /* Sombra elegante */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column; /* Empilha texto e imagem */
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center; /* Centraliza texto no mobile */
+        padding: 0;
+        margin: 0;
+    }
+
+    .about-highlights {
+        align-items: center; /* Centraliza a lista */
+    }
+
+    .about-image {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        /* Ajusta a sombra para mobile */
+        box-shadow: 10px 10px 0px rgba(255, 137, 41, 0.2);
+    }
+}
+
 #avaliacoes {
     width: 100%;
     margin: auto;
 }
 
-#serviços {
+#servicos { /* Corrigido de #serviços para #servicos (evitar caracteres especiais em ID no CSS) */
     width: 100%;
     margin: auto;
     margin-top: 80px;
 }
 
 .brands-list {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    padding-block: 40px;
     display: flex;
+    overflow: hidden; /* Importante para o carrossel infinito */
 }
 
 .icons-wrapper {
     display: flex;
-    gap: 100px;
-    animation: scroll-loop 13s linear infinite;
+    gap: 120px;
+    animation: scroll-loop 20s linear infinite;
 }
 
 .icons-wrapper img {
@@ -214,36 +390,83 @@ a {
     from {
         transform: translateX(0);
     }
-
     to {
-        transform: translateX(-6000px);
+        transform: translateX(-50%); /* Ajustado para lógica de carrossel infinito comum */
     }
+}
+
+#servicos .carousel {
+    max-width: 1400px; /* Define uma largura máxima (podes aumentar ou diminuir este valor) */
+    margin: 0 auto;   /* Garante que continua centralizado */
+}
+
+/* 2. Controla a altura e proporção das IMAGENS */
+#servicos .carousel-item img {
+    height: 600px;       /* Define a altura fixa que queres. Teste 300px, 400px ou 500px */
+    width: 100%;         /* Garante que ocupa a largura disponível da caixa */
+    object-fit: cover;   /* A MÁGICA: Corta o excesso da imagem para preencher o espaço sem esticar/deformar */
+    border-radius: 15px; /* Opcional: Arredonda os cantos das imagens para ficar mais moderno */
+}
+
+/* 3. Ajuste para Telas Pequenas (Celular) */
+@media (max-width: 600px) {
+    #servicos .carousel {
+        max-width: 90%; /* No celular, aproveita mais a largura */
+    }
+    
+    #servicos .carousel-item img {
+        height: 250px; /* Altura menor para celular */
+    }
+}
+
+.about-content {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    color: #ffffff;
+    font-family: var(--font-family-primary);
+    font-size: 1.4rem;
+    line-height: 1.76;
+    text-align: justify;
+    max-width: 60rem;
+    padding-left: 3rem;
+    margin-right: 3rem;
+}
+
+.about-image {
+    flex: 0 0 40%;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 45rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin-right: 3rem;
+}
+
+.google-avaliacoes {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-inline: 50px;
 }
 
 .google-avaliacoes img {
     width: 200px;
 }
 
-.google-avaliacoes {
-    /* Manter display: flex para alinhar o Google e o Carrossel lado a lado */
-    display: flex;
-    width: 100%;
-    /* Ajustei o gap para dar um pequeno espaço entre os dois blocos */
-    gap: 20px;
-    /* Centraliza o conteúdo horizontalmente na seção, se necessário */
-    justify-content: center;
-    /* Alinha os itens ao topo ou no centro, dependendo do que você preferir */
-    align-items: flex-start;
-    /* Alinha os itens pelo topo */
-    border: none;
-    /* Removi a borda de teste */
-    /* Adicione um padding ou margem se precisar de espaço nas laterais da seção */
-    padding-inline: 50px;
-}
-
-/* Garante que o link do Google tenha seu próprio espaço */
 .google-avaliacoes a {
-    /* Permite que o link não encolha */
     flex-shrink: 0;
 }
 
@@ -251,7 +474,6 @@ a {
 #avaliacoes .title-section2,
 #about .title-section3,
 #localizacao .title-section3 {
-    /* titulos juntos (pois são iguais)  */
     display: flex;
     justify-content: flex-end;
     gap: 70px;
@@ -263,7 +485,6 @@ a {
 
 #about .title-section3,
 #localizacao .title-section3 {
-    /* apenas mudando a cor do about e do localização */
     color: #FF8929;
     display: flex;
     justify-content: flex-start;
@@ -279,7 +500,6 @@ a {
     width: 810px;
     transform-origin: right;
     transform: scaleX(1.5);
-
 }
 
 #servicos .title-section2 h1,
@@ -295,65 +515,102 @@ a {
 }
 
 /* carrossel */
-.review-carousel {
+/* =========================================
+   NOVO CARROSSEL DE AVALIAÇÕES
+   ========================================= */
+
+/* =========================================
+   NOVO CARROSSEL DE AVALIAÇÕES (CORRIGIDO)
+   ========================================= */
+
+/* =========================================
+   NOVO CARROSSEL DE AVALIAÇÕES (CORRIGIDO)
+   ========================================= */
+
+.carousel-container {
     position: relative;
-    padding-block: 10px;
-    overflow-x: auto;
-}
-
-.review-carousel::-webkit-scrollbar {
-    display: none;
-}
-
-/* trilho com todos os cards */
-.review-track {
-    display: flex;
-    gap: 30px;
-    transition: transform 0.45s ease;
-    height: 450px;
-    margin-top: 50px;
-}
-
-/* cada card ocupa 1/3 da largura visível */
-.review-card {
-    flex: 0 0 calc(33.333% - 13.5px);
-    /* 3 por vez */
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    background: #fff;
-}
-
-.review-card img {
     width: 100%;
-    display: block;
-}
-
-/* botão de avançar (seta laranja à direita) */
-.review-next {
-    margin: 20px;
-    position: absolute;
-    right: -22px;
-    top: 50%;
-    transform: translateY(-65%);
-    width: 75px;
-    height: 339px;
-    font-size: 100px;
-    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 60px; /* Espaço para as setas */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.carousel-window {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 0; 
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* --- AQUI ESTÁ A CORREÇÃO (3 ITENS) --- */
+.carousel-card {
+    /* Força exatos 33.333% (1/3 da tela) */
+    flex: 0 0 33.3333%; 
+    width: 33.3333%;
+    min-width: 33.3333%; /* Garante que não sobrescreve */
+    
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-card img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: block;
+    background-color: #fff;
+}
+
+/* --- ESTILO DAS SETAS (Laranjas e sem fundo) --- */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; 
+    border: none;
+    color: #FF8929; 
+    font-size: 4rem; 
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-top-left-radius: 13px;
-    border-bottom-left-radius: 13px;
+    z-index: 10;
+    transition: transform 0.3s ease;
 }
 
-.review-item img {
-    width: 450px;
+.carousel-btn:hover {
+    background-color: transparent; 
+    transform: translateY(-50%) scale(1.2); 
+    color: #ff9e4d;
 }
 
-/* verificar unidades de medidas */
+.btn-prev { left: 0; }
+.btn-next { right: 0; }
+
+/* --- RESPONSIVIDADE (CELULAR) --- */
+@media (max-width: 768px) {
+    .carousel-card {
+        /* No celular volta para 1 item (100%) */
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .carousel-btn {
+        font-size: 3rem; 
+    }
+    
+    .carousel-container {
+        padding: 20px 30px;
+    }
+}
+
 #about .title-section3 img {
     width: 700px;
     transform-origin: left;
@@ -366,367 +623,400 @@ a {
     margin-left: 32px;
 }
 
-#about .texto-e-imagem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex: 0 0 40%;
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-#about .texto-e-imagem img {
-    width: 400px;
-    flex: 0 0 60%;
-}
-
-#about .texto img {
-    width: 700px;
-    height: 700px;
-}
-
-/* footer */
 footer {
-    background-color: black;
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: var(--font-family-primary);
+    position: relative;
+    border-top: 5px solid #FF8929; /* Detalhe laranja no topo do footer */
 }
 
-.footer-elements {
+/* Container que segura as colunas */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 20px;
+    justify-content: space-between; /* Espalha as colunas */
+    align-items: flex-start;        /* Alinha tudo pelo topo */
+    flex-wrap: wrap;                /* Permite quebrar linha em telas menores */
+    padding-inline: 20px;
+    gap: 40px;
 }
 
-footer .cambio {
-    width: 259px;
-    height: 300px;
-}
-
-footer .ecologia {
-    width: 254px;
-    height: 254px;
-}
-
-.social-media-footer {
+/* Estilo Genérico das Colunas */
+.footer-col {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-family-primary);
-    color: white;
-}
-
-.facebook>img {
-    width: 38px;
-    height: 35px;
-}
-
-.social-media-footer .instagram,
-.social-media-footer .facebook {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-family-primary);
-    font-size: 1.2rem;
-}
-
-.social-media-footer .facebook {
     gap: 20px;
+    flex: 1;             /* Tenta ocupar espaço igual */
+    min-width: 200px;    /* Largura mínima para não esmagar */
 }
 
-.social-media-footer .instagram a,
-.social-media-footer .facebook a {
-    text-decoration: none;
-    color: white;
+/* Títulos das Colunas (Laranja e Moderno) */
+.footer-col h4 {
+    color: #FF8929;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-left: 3px solid #FF8929; /* Detalhe visual ao lado do título */
+    padding-left: 10px;
 }
 
-.contato {
+/* --- COLUNA 1: IMAGENS (LOGOS) --- */
+.logos-col {
+    align-items: center; /* Centraliza as imagens nesta coluna específica */
+    gap: 30px;
+}
+
+.logos-col img {
+    /* Reduzimos o tamanho para ficar elegante */
+    max-height: 120px; 
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.logos-col img:hover {
+    transform: scale(1.05);
+}
+
+/* --- COLUNA 2: REDES SOCIAIS --- */
+.social-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 16px;
-    font-family: var(--font-family-primary);
-    color: white;
-    font-size: 1.2rem;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-.acesso-rapido {
+.social-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-item a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.social-item a:hover {
+    color: #FF8929;
+}
+
+/* --- COLUNA 3: CONTATO --- */
+.contact-info p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* --- COLUNA 4: ACESSO RÁPIDO --- */
+.quick-links {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family-primary);
-    color: #FFF;
-    font-size: 1.2rem;
+    gap: 10px;
 }
 
-.acesso-rapido ul {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    font-family: var(--font-family-primary);
-    line-height: 170%;
+.quick-links li a {
+    color: #ccc;
+    font-size: 0.95rem;
+    transition: all 0.3s;
 }
 
-.acesso-rapido ul a {
-    text-decoration: none;
-    color: white;
+.quick-links li a:hover {
+    color: #FF8929;
+    padding-left: 5px; /* Efeito de movimento ao passar o mouse */
 }
 
-footer h3 {
+/* --- COPYRIGHT --- */
+.copyright {
     text-align: center;
-    font-family: var(--font-family-primary);
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 100;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
 }
 
+.copyright p {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* --- WHATSAPP FLUTUANTE --- */
 footer .logo-wpp {
     position: fixed;
-    bottom: 5px;
-    right: 20px;
-    left: auto;
+    bottom: 30px;
+    right: 30px;
     z-index: 1000;
+    transition: transform 0.3s;
+}
+
+footer .logo-wpp:hover {
+    transform: scale(1.1);
 }
 
 footer .logo-wpp img {
-    height: 70px;
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
 }
 
-@media (max-width: 600px) {
+/* --- RESPONSIVIDADE DO FOOTER --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Centraliza tudo no celular */
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        align-items: center; /* Centraliza itens internos */
+    }
+
+    .footer-col h4 {
+        border-left: none;      /* Remove a borda lateral no mobile */
+        border-bottom: 2px solid #FF8929; /* Coloca borda embaixo */
+        padding-left: 0;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+    .logos-col {
+        flex-direction: row; /* Mantém os logos lado a lado mesmo no celular */
+        justify-content: center;
+    }
+
+    .quick-links {
+        align-items: center;
+    }
+}
+
+/* === RESPONSIVIDADE === */
+
+
+/* =========================================
+   AJUSTE DAS LINHAS DOS TÍTULOS (Full Width)
+   ========================================= */
+
+/* 1. Ocultar a imagem antiga da linha (para usarmos CSS puro) */
+.title-section2 .line1 img,
+.title-section3 .line1 img {
+    display: none;
+}
+
+/* 2. Configuração base da linha para TODAS as seções */
+.title-section2 .line1,
+.title-section3 .line1 {
+    display: block;      /* Torna o span um bloco */
+    height: 5px;         /* Espessura da linha (ajuste se quiser mais fina/grossa) */
+    flex: 1;             /* O SEGREDO: Faz a linha ocupar todo o espaço vazio */
+    border-radius: 2px;  /* Arredonda levemente as pontas */
+}
+
+/* 3. Ajuste específico para SERVIÇOS e AVALIAÇÕES (Texto na direita, Linha na esquerda) */
+#servicos .title-section2,
+#avaliacoes .title-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Garante que os elementos se espalhem */
+    width: 100%;        /* Garante que a caixa use 100% da tela */
+    gap: 30px;          /* Espaço entre a linha e o texto */
+    padding-right: 50px; /* Margem da direita para o texto não colar na borda da tela */
+}
+
+/* Cor da linha branca */
+#servicos .title-section2 .line1,
+#avaliacoes .title-section2 .line1 {
+    background-color: #ffffff;
+}
+
+
+/* 4. Ajuste específico para QUEM SOMOS e LOCALIZAÇÃO (Texto na esquerda, Linha na direita) */
+#about .title-section3,
+#localizacao .title-section3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    padding-left: 50px; /* Margem da esquerda para o texto não colar na borda */
+}
+
+/* Cor da linha laranja */
+#about .title-section3 .line1,
+#localizacao .title-section3 .line1 {
+    background-color: #FF8929;
+}
+
+/* =========================================
+   AJUSTE PARA NOTEBOOKS E TABLETS (Tela Média)
+   ========================================= */
+@media (max-width: 1366px) {
+    
+    /* 1. Ajuste do Cabeçalho Preto (Endereço e Redes) */
     header {
-        flex-wrap: wrap;
-        height: 3rem;
-        padding-top: 5px;
-    }
-
-    .info-address {
-        font-size: 7px;
-    }
-
-    .info-address span img {
-        width: 15px;
-    }
-
-    .social-media a img {
-        width: 0px;
+        padding-inline: 15px; /* Menos borda lateral */
     }
 
     .info-address span {
+        font-size: 0.85rem; /* Diminui um pouco a fonte do endereço */
         gap: 5px;
     }
 
-    #call-to-action {
-        margin-inline: 0px;
+    /* 2. Ajuste Crítico do Menu de Navegação */
+    #call-to-action nav {
+        /* O GRANDE SEGREDO: Reduzimos o gap de 200px para 50px */
+        gap: 50px; 
+        
+        /* Opcional: Se ainda bater, usamos space-end ou ajustamos o padding */
+        justify-content: center; 
     }
 
     #call-to-action nav a {
-        font-size: 10px;
+        font-size: 0.9rem; /* Links ligeiramente menores */
     }
 
+    /* 3. Ajuste da Logo para não invadir o espaço */
     #call-to-action .logotipo {
-        left: 125px;
-        bottom: 35px;
-        width: 4rem;
+        width: 7rem; /* Reduz a logo de 9rem para 7rem */
+        left: 20px;  /* Cola a logo um pouco mais na esquerda */
+        top: 50%;    /* Centraliza verticalmente (segurança) */
+        transform: translateY(-50%); /* Garante o centro vertical */
     }
 
-    #call-to-action>div {
-        margin-inline: 0px;
+    /* 4. Ajuste dos Títulos Grandes (CTA) para caberem na tela menor */
+    #call-to-action .title-line1 { font-size: 4rem; }
+    #call-to-action .title-line2 { font-size: 4.5rem; }
+    #call-to-action .title-line3 { font-size: 5rem; }
+    
+    #call-to-action .button {
+        width: auto; /* Deixa o botão se ajustar ao conteúdo */
+        padding: 10px 30px;
+    }
+    /* =========================================
+   SEÇÃO QUEM SOMOS (CORRIGIDA)
+   ========================================= */
+
+#about {
+    width: 100%;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+/* Container principal */
+.about-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* --- COLUNA DE TEXTO --- */
+.about-text {
+    flex: 1;
+    color: #e0e0e0;
+    font-family: var(--font-family-primary);
+    
+    /* CORREÇÃO 1: Alinhamento total à esquerda */
+    text-align: left; 
+    
+    /* Remove preenchimentos estranhos que estavam no código antigo */
+    padding: 0; 
+    margin: 0;
+}
+
+.about-text h3 {
+    color: #FF8929;
+    font-size: 2rem;
+    font-family: var(--font-family-secondary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* CORREÇÃO 2: Removida a linha laranja do texto em negrito */
+.about-text strong {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: none; /* Remove o sublinhado laranja */
+    text-decoration: none;
+}
+
+/* --- LISTA DE DESTAQUES (CHECKS) --- */
+.about-highlights {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    /* CORREÇÃO 3: Remove o recuo padrão da lista para alinhar com o parágrafo */
+    padding-left: 0; 
+    list-style: none;
+}
+
+.about-highlights li {
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.about-highlights li span {
+    color: #FF8929;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* --- COLUNA DA IMAGEM --- */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        text-align: left; /* Garante alinhamento à esquerda mesmo no celular */
     }
 
-    #call-to-action div>span {
-        margin: auto;
+    .about-text {
+        width: 100%; /* Ocupa largura total */
+        padding: 0 10px; /* Pequena margem de segurança no mobile */
     }
 
-    #call-to-action .title-line1 {
-        font-size: 2rem;
-        line-height: 60%;
-    }
-
-    #call-to-action .title-line2 {
-        font-size: 2em;
-    }
-
-    #call-to-action .title-line3 {
-        font-size: 2.5em;
-        gap: 10px;
-    }
-
-    /* botão */
-    #call-to-action div span button {
-        padding-inline: 8px;
-        border: 2px solid black;
-    }
-
-    #call-to-action div span button h3 {
-        gap: 5px;
-        font-size: 15px;
-        letter-spacing: 2px;
-    }
-
-    /* serviços */
-    #servicos,
-    #avaliacoes,
-    #localizacao {
-        margin-top: 30px;
-    }
-
-    #servicos .title-section2 img,
-    #avaliacoes .title-section2 img {
-        width: 150px;
-    }
-
-    #servicos .title-section2 h1,
-    #avaliacoes .title-section2 h1 {
-        font-size: 2rem;
-        margin-right: 20px;
-    }
-
-    #avaliacoes .title-section2 h1 {
-        font-size: 2rem;
-    }
-
-    #about {
-        margin-top: 30px;
-        position: relative;
-    }
-
-    #about .title-section3 img,
-    #localizacao .title-section3 img {
-        width: 130px;
-    }
-
-    .review-carousel {
-        margin: 100px auto;
-        width: 90%;
-        border: 5px solid red;
-        display: flex;
-        overflow-x: auto;
-    }
-
-    .review-track {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        overflow-x: auto;
-    }
-
-    .review-item {
-        flex: 0 0 5em;
-        height: 5em;
-        padding: 1em;
-        border-radius: .2em;
-        text-align: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
-    }
-
-    .review-item img {
+    .about-image {
         width: 100%;
-        display: block;
-    }
-
-    .review-next {
-        position: absolute;
-        right: -25px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background: #FF8929;
-        border: none;
-        cursor: pointer;
-        color: #fff;
-        font-size: 25px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #about .title-section3 h1,
-    #localizacao .title-section3 h1 {
-        font-size: 2rem;
-        margin-left: 20px;
-    }
-
-    #about .texto {
-        flex-direction: column;
-        padding-inline: 0rem;
-    }
-
-    #about .texto p {
-        font-size: 15px;
-        text-align: center;
-        padding-top: 10px;
-    }
-
-    #about .texto img {
-        width: 120px;
-        height: 200px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-
-    #localizacao .mapa {
-        height: 200px;
-        padding-top: 20px;
-    }
-
-    .footer-elements {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    footer .cambio {
-        width: 150px;
-        height: 200px;
-    }
-
-    footer .ecologia {
-        width: 150px;
-        height: 150px;
-    }
-
-    footer .logo-insta,
-    .facebook>img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .social-media-footer .instagram,
-    .social-media-footer .facebook {
-        font-size: 16px;
-        gap: 15px;
-    }
-
-    .social-media-footer .facebook {
-        gap: 25px;
-    }
-
-    .contato {
-        gap: 10px;
-        font-size: 16px;
-    }
-
-    .acesso-rapido ul {
-        align-items: center;
-        padding: 0;
-        font-size: 16px;
-    }
-
-    footer h3 {
-        font-size: 10px;
-    }
-
-    footer .logo-wpp img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .footer-elements h1 {
-        font-size: 20px;
+        margin-top: 40px;
     }
 }
+    #call-to-action .button h3 {
+        font-size: 2rem;
+    }
+}
+
