@@ -13,39 +13,13 @@
 
 O site possui as seguintes seções principais:
 
-### **Página Inicial (index.html)**
-Apresenta o *hero* com fundo dinâmico, slogan principal, botão chamativo de orçamento e navegação com logotipo em destaque.
+* **Página Inicial (`index.html`):** Apresentação principal do projeto/conteúdo.
+* **Seção de Serviços (`#servicos`):** Esta seção contém os principais tipos de serviços que o profissional da área realiza.
+* **Seção de Quem Somos (`#about`):** Um paragráfo que conta um pouco sobre a oficina e algumas características.
+* **Seção de Avaliações (`#avaliacoes`):** Carrossel interativo que mostra algumas avaliações sobre a oficina mecânica no google avaliações.
+* **Seção de Localização (`#localizacao`):** Contém um mapa interativo com o endereço do local.
+* **Footer (`footer`):** Contpem os emblemas que fzem parte dos valores da oficina, contato, endereço e um acesso rápido para navegação.
 
-### **Marcas Atendidas**
-Faixa com logos de montadoras rolando automaticamente, reforçando credibilidade e abrangência.
-
-### **Serviços (#servicos)**
-Carrossel profissional exibindo os principais serviços da oficina, cada um com:
-- Descrição detalhada;
-- Imagem ilustrativa;
-- Botão "Saiba mais".
-
-### **Quem Somos (#about)**
-Seção institucional apresentando:
-- Histórico da oficina;
-- Valores e missão;
-- Diferenciais competitivos;
-- Imagem profissional da equipe/local.
-
-### **Avaliações (#avaliacoes)**
-Carrossel customizado feito em JavaScript exibindo prints reais e depoimentos de clientes satisfeitos.
-
-### **Seção de Localização (#localizacao)**
-Mapa interativo do Google Maps embutido, mostrando a oficina na:
-📍 **R. Oliveira Melo, 605 – Ipiranga, São Paulo – SP**.
-
-### **Rodapé**
-Inclui:
-- Informações de contato;
-- Links para redes sociais;
-- Menu de links rápidos;
-- Selos de qualidade;
-- Botão flutuante do WhatsApp para contato imediato.
 
 ## ⚙️ Como Rodar o Projeto Localmente
 
