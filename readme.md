@@ -47,6 +47,26 @@ Inclui:
 - Selos de qualidade;
 - Botão flutuante do WhatsApp para contato imediato.
 
+## ⚙️ Como Rodar o Projeto Localmente
+
+Siga os passos abaixo para ter uma cópia do projeto em execução na sua máquina local.
+
+### Pré-requisitos
+
+Você só precisa de um navegador web moderno (como Chrome, Firefox, Edge, etc.).
+
+### Instalação
+
+1.  **Clone o repositório** para sua máquina local:
+    ```bash
+    git clone [https://github.com/vilelakami/projeto-landing-page.git]
+    ```
+2.  **Navegue até o diretório** do projeto:
+    ```bash
+    cd projeto-landing-page
+    ```
+3.  **Abra o arquivo principal (`index.html`)** no seu navegador de preferência.
+
 ## 🙋 Autores
 
 <table align="center">
